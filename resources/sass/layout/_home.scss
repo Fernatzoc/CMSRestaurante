@@ -1,0 +1,180 @@
+/* BIENVENIDA */
+
+.bienvenida{
+    padding: 75px 0;
+    }
+    
+    .bienvenida h1{
+    margin-bottom: 75px;
+    color: $primary;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+    .texto-historia{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+    }
+    }
+    
+    .historia-restaurante{
+    width: 100%x;
+    }
+    
+    .historia-restaurante h2{
+    color: $primary;
+    font-size: 34px;
+    font-weight: normal;
+    }
+    
+    .historia-restaurante p{
+    color: $colorText;
+    font-size: 16px;
+    }
+    
+    
+    .imagen-acercade{
+    width: 100%; 
+    }
+    
+    .imagen-acercade img {
+    max-width: 100%;
+    box-shadow: -7px 7px $primary;
+    }
+    
+    /* FIN BIENVENIDA */
+    
+    
+    /* INICIO PLATILLOS */
+    
+    @media (min-width: 768px) {
+    .listado-platillos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+    
+    
+    
+    }
+    
+    .platillos {
+    background-color: #2d2931;
+    padding: 75px 0;
+    }
+    
+    .platillos h1 {
+    color: $primary;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 100px;
+    }
+    
+    
+    .platillo h2 {
+    color: $primary;
+    font-size: 34px;
+    font-weight: normal;
+    }
+    
+    
+    /* FIN PLATILLOS */
+    
+    /* CAJA FONDO FIJO */
+    
+    .fondo-fijo  {
+      width: 100%;
+      height: 350px;
+      background-size: cover;
+      background-position: center center;  
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      filter: opacity(0.5);
+    }
+    
+    .inicio {
+      background-image: url("https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/static-bg.jpg");
+    }
+    
+    .img-conocenos {
+      background-image: url("https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/about-divider.jpg") ;
+      margin-top: 75px;
+    }
+    /* FIN FONFO FIJO */
+    
+    /* INICIO RESEÑAS */
+    
+    @media (min-width: 768px) {
+    .comentarios {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+    }
+    
+    .comentarios {
+    background-color: #1d1922;
+    padding: 75px 0;;
+    }
+    
+    .fotnom {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    }
+    
+    .comentarios h1 {
+    color: $primary;
+    font-size: 48px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 100px;
+    }
+    
+    .comentarios h3 {
+    color: #f89e4a;
+      text-align:center;
+    font-weight: normal;
+    font-size: 250%;
+    text-transform: uppercase;
+    }
+    
+    .comentarios p {
+    color: $colorText;
+    font-size: 16px;
+    }
+    
+    
+    .fotnom {
+    
+    display: flex;
+    justify-content: left;
+    }
+    
+    .fotnom img {
+    width: 100%;
+    height: auto;
+    }
+    
+    .fotnom div {
+    border-radius: 50px;
+    width: 100px;
+    overflow: hidden;
+    margin-right: 20px;
+    }
+    
+    /* COMENTARIOS RESPONSIVE */
+    
+    @media only screen and (max-width: 600px) {
+    .lista-comentarios {
+      margin-top: 40px;
+    }
+    }
+    
+    
+    /* FINAL RESEÑAS */

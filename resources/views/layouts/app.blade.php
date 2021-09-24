@@ -1,83 +1,173 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="./assets/imgs/logo_1.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    
+    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+
 </head>
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
 
+<div class="cd-header">
+    <div class="icono_menu_movil">
+        <div class="">
+            <a href="#"><img src="assets/imgs/logo_1.png" alt="logo Andrea's Cafe y Restaurante" width="50%" height="auto"></a>
+        </div>
+        <div class="">
+            <div class="menu-icon hover-target">
+                <span class="menu-icon__line menu-icon__line-left"></span>
+                <span class="menu-icon__line"></span>
+                <span class="menu-icon__line menu-icon__line-right"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="nav__content">
+        <ul class="nav__list">
+            <li class="nav__list-item active-nav"><a href="/" class="hover-target">INICIO</a></li>
+            <li class="nav__list-item"><a href="/conocenos" class="hover-target">CONOCENOS</a></li>
+            <li class="nav__list-item"><a href="/menu" class="hover-target">MENU</a></li>
+            <li class="nav__list-item"><a href="/contacto" class="hover-target">CONTACTANOS</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class='cursor' id="cursor"></div>
+<div class='cursor2' id="cursor2"></div>
+<div class='cursor3' id="cursor3"></div>
+
+
+<header>
+    <div class="filtro"></div>
+    <div class="degradado"></div>
+    <div>
+        <div class="logo_navegacion">
+
+            <div class="logo">
+                <a href="#"><img src="assets/imgs/logo_1.png" alt="logo Andrea's Cafe y Restaurante" width="100%" height="auto"></a>
+            </div>
+
+
+            <div class="navegacion_carrito_desktop carrito_movil">
+                <nav>
+                    <ul>
+                        <li><a href="/">INICIO</a></li>
+                        <li><a href="/conocenos">CONOCENOS</a></li>
+                        <li><a href="/menu">MENU</a></li>
+                        <li><a href="/contacto">CONTACTANOS</a></li>
                     </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                </nav>
+                <div class="carrito">
+                    <img src="assets/icons/fontawesomePRO/cart.svg" alt="cart" width="30%" height="auto">
                 </div>
             </div>
-        </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        </div>
+        <div class="titulo_baner">
+            <div>
+                A Premium and Authentic Steak House
+            </div>
+        </div>
     </div>
+</header>
+
+
+    <main class="py-4">
+        @yield('content')
+    </main>
+
+
+<footer class="footer contenedor">
+
+    <div class="footer-part-1">
+
+        <div class="reservation">
+            <h2>We Are Waiting to Serve You!</h2>
+            <button class="btn-reservation" >Book a Table</button>
+            <h2>Or Call 40995874</h2>
+            <div class="menu-footer">
+                <ul class="list-menu-footer" >
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./about.html">Conocenos</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-part-2">
+        <div class="widget-1">
+            <div class="location">
+                <h3>Direccion</h3>
+                <p>1234 San Marcos</p>
+            </div>
+            <div class="follow">
+                <h3>Siguenos</h3>
+                <ul class="icons" >
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="widget-2">
+            <img src="./assets/imgs/food-1.jpg" alt="Mesas">
+        </div>
+        <div class="widget-3">
+            <h3>Hours</h3>
+            <p>Lunes: 11AM - 11PM</p>
+            <p>Martes: 11AM - 11PM</p>
+            <p>Miercoles: 11AM - 11PM</p>
+            <p>Jueves: 11AM - 11PM</p>
+            <p>Viernes: 11AM - 11PM</p>
+            <p>Sabado: 11AM - 01AM</p>
+            <p>Domingo: 11AM - 01AM</p>
+        </div>
+    </div>
+
+    <div class="credits">
+        <p>&copy; Copyright 2021 | Chatos</p>
+    </div>
+
+</footer>
+
 </body>
 </html>

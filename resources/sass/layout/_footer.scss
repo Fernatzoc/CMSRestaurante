@@ -1,0 +1,139 @@
+.footer {
+    margin-top: 75px;
+    margin-bottom: 25px;
+    }
+    
+    .footer h2 {
+    color: $primary;
+    font-weight: normal;
+    font-family: $fontTitle;
+    font-size: 32px;
+    text-align: center;
+    }
+    
+    
+    .footer-part-1 {
+    margin: 0 auto;
+    }
+    
+    
+    .btn-reservation {
+    margin: 50px auto;
+    display:block;
+    border-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    color: $primary;
+    border-color: $primary;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    padding-top: 18px;
+    padding-right: 28px;
+    padding-bottom: 18px;
+    padding-left: 28px;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    }
+    
+    .btn-reservation:hover {
+    background-color: $primary;
+    color: #fff;
+    }
+    
+    .list-menu-footer {
+    padding: 0;
+    }
+    
+    .menu-footer {
+    padding: 0;
+    margin: 0 auto;
+    width: 326px;
+    margin-bottom: 60px;
+    }
+    
+    .list-menu-footer li a {
+    color: $colorText;
+    font-family: $fontContent;
+    font-size: 14px;
+    }
+    
+    .list-menu-footer li a:hover {
+    color: $primary;
+    }
+    
+    .list-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    @media (min-width: 768px) {
+    .footer-part-2 {
+        display: flex;
+    }
+    }
+    
+    
+    .widget-1,
+    .widget-2,
+    .widget-3 {
+    width: 100%;
+    }
+    
+    .footer-part-2 img {
+    margin: 0 auto;
+    height: 350px;
+    }
+    
+    
+    .footer-part-2 h3 {
+    text-align: center;
+    color: $primary;
+    font-weight: normal;
+    font-size: 28px;
+    }
+    
+    .footer-part-2 p {
+    color: $colorText;
+    text-align: center;
+    font-size: 16px;
+    }
+    
+    .follow ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    }
+    
+    .icons {
+    margin: 15px auto;
+    width: 80px;
+    }
+    
+    .fa-facebook-square,
+    .fa-twitter-square,
+    .fa-instagram {
+    font-size: 20px;
+    color: $colorText;
+    }
+    
+    .widget-3 p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 10px;
+    }
+    
+    
+    .credits p {
+    margin-top: 50px;
+    font-family: $fontContent;
+    font-size: 12px;
+    text-align: center;
+    color: $colorText;
+    }

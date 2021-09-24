@@ -1,0 +1,48 @@
+/* GLOBALS */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $fontContent;
+    background-color: $fondo1;
+}
+
+/** GLOBALES **/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-family: $fontContent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $fontTitle;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+}
