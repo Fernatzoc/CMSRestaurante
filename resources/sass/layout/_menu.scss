@@ -1,0 +1,92 @@
+@media (min-width: 768px) {
+    .menu-section {
+      margin: 75px 0;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menu-2 {
+      flex-direction: row-reverse;
+    }
+    }
+    
+    .memu-image {
+      width: 100%;
+    }
+    
+    .menu-list {
+      width: 100%;
+    }
+    
+    .menu-list h2 {
+      text-align: center;
+      color: $primary;
+      font-weight: normal;
+      font-size: 48px;
+    }
+    
+    @media (min-width: 768px) {
+      .menu-platillo {
+        display: flex;
+        margin: 20px;
+        padding: 0 25px;
+        align-items: center;
+        justify-content: space-between;
+      }
+    
+      .menu-platillo-content {
+        text-align: left;
+        width: 70%;
+      }
+    
+    
+      .menu-platillo-content h3 {
+        line-height: 2;
+        margin: 0;
+        padding: 0;
+        color: $primary;
+        font-weight: normal;
+      }
+    
+    
+      .menu-platillo-content p {
+        margin: 0;
+        padding: 0;
+        color: $colorText;
+      }
+    
+      .menu-platillo-price p {
+        margin: 0;
+        padding: 0;
+        color: $primary;
+        font-family: $fontTitle;
+        font-size: 39px;
+      }
+    }
+    
+    .menu-platillo {
+      text-align: center;
+    }
+    
+    
+    .menu-platillo-content h3 {
+      line-height: 2;
+      font-size: 22px;
+      color: $primary;
+      font-weight: normal;
+    }
+    
+    
+    .menu-platillo-content p {
+      font-size: 18px;
+      color: $colorText;
+    }
+    
+    .menu-platillo-price p {
+      color: $primary;
+      font-family: $fontTitle;
+      font-size: 30px;
+    }
+    

@@ -106,19 +106,22 @@
 </header>
 
 
-    <main class="py-4">
+    <main>
         @yield('content')
     </main>
 
 
 <footer class="footer contenedor">
 
+
+    {{$empresa}}
+
     <div class="footer-part-1">
 
         <div class="reservation">
-            <h2>We Are Waiting to Serve You!</h2>
-            <button class="btn-reservation" >Book a Table</button>
-            <h2>Or Call 40995874</h2>
+            <h2>¡Estamos esperando para servirle!!</h2>
+            <button class="btn-reservation" >Reservar una mesa</button>
+            <h2>O Llamanos {{ $empresa->telefono }}</h2>
             <div class="menu-footer">
                 <ul class="list-menu-footer" >
                     <li><a href="./index.html">Inicio</a></li>
@@ -137,7 +140,7 @@
         <div class="widget-1">
             <div class="location">
                 <h3>Direccion</h3>
-                <p>1234 San Marcos</p>
+                <p>{{ $empresa->direccion }}</p>
             </div>
             <div class="follow">
                 <h3>Siguenos</h3>
@@ -152,7 +155,7 @@
             <img src="./assets/imgs/food-1.jpg" alt="Mesas">
         </div>
         <div class="widget-3">
-            <h3>Hours</h3>
+            <h3>Horarios</h3>
             <p>Lunes: 11AM - 11PM</p>
             <p>Martes: 11AM - 11PM</p>
             <p>Miercoles: 11AM - 11PM</p>

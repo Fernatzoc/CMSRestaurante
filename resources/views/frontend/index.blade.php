@@ -13,7 +13,7 @@
             <button class="btn-reservation">Book a Table</button>
         </div>
     </div>
-
+    
 </section>
 
 <section class="platillos">
@@ -23,12 +23,12 @@
             <img class= "imagen"src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-2.jpg">
             <h2>Carne de res asada al horno con vegetales  </h2>
         </div>
-
+        
         <div class="platillo">
             <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-1.jpg">
             <h2>Filete carbonizado con salsa BBQ</h2>
         </div>
-
+        
         <div class="platillo">
             <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-4.jpg">
             <h2>Costillas BBQ con verduras y papas fritas</h2>
@@ -54,7 +54,7 @@
             <h3>MArk Tomphson</h3>
         </div>
     </div>
-
+    
     <div class="lista-comentarios">
         <p>Nada mejor que una tarde entre amigos, en un lugar tan agradable como este, puedo decir que disfrute cada instante y cada platillo.</p>
         <div class="fotnom">
@@ -64,7 +64,7 @@
             <h3>Lisa Ruiz</h3>
         </div>
     </div>
-
+    
     <div class="lista-comentarios">
         <p>La delicadeza y la calidad en cada uno de sus platillos, de los mejores el occidente del pais, definitivamente un destino gastronomico que no puede faltar de visitar.</p>
         <div class="fotnom">

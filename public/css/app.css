@@ -10847,3 +10847,228 @@ body.nav-active .nav__list-item:nth-child(10) {
   text-align: center;
   color: #a9aeb9;
 }
+
+.parrafouno h4 {
+  margin-bottom: 75px;
+  color: #f89e4a;
+  font-size: 28px;
+  text-align: center;
+  font-weight: normal;
+  width: 85%;
+  margin: 0 auto 100px auto;
+}
+
+.parrafouno img {
+  width: 100%;
+}
+
+.titulohistoria h2 {
+  color: #f89e4a;
+  text-align: left;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .nuestrahistoria {
+    width: 65%;
+    margin: 0 10px 0 auto;
+  }
+}
+.titulohistoria h3 {
+  color: #f89e4a;
+  font-size: 28px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.titulohistoria p {
+  color: #a9aeb9;
+  text-align: center;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .menu-section {
+    margin: 75px 0;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-2 {
+    flex-direction: row-reverse;
+  }
+}
+.memu-image {
+  width: 100%;
+}
+
+.menu-list {
+  width: 100%;
+}
+
+.menu-list h2 {
+  text-align: center;
+  color: #f89e4a;
+  font-weight: normal;
+  font-size: 48px;
+}
+
+@media (min-width: 768px) {
+  .menu-platillo {
+    display: flex;
+    margin: 20px;
+    padding: 0 25px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-platillo-content {
+    text-align: left;
+    width: 70%;
+  }
+
+  .menu-platillo-content h3 {
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    color: #f89e4a;
+    font-weight: normal;
+  }
+
+  .menu-platillo-content p {
+    margin: 0;
+    padding: 0;
+    color: #a9aeb9;
+  }
+
+  .menu-platillo-price p {
+    margin: 0;
+    padding: 0;
+    color: #f89e4a;
+    font-family: "Yeseva One", cursive;
+    font-size: 39px;
+  }
+}
+.menu-platillo {
+  text-align: center;
+}
+
+.menu-platillo-content h3 {
+  line-height: 2;
+  font-size: 22px;
+  color: #f89e4a;
+  font-weight: normal;
+}
+
+.menu-platillo-content p {
+  font-size: 18px;
+  color: #a9aeb9;
+}
+
+.menu-platillo-price p {
+  color: #f89e4a;
+  font-family: "Yeseva One", cursive;
+  font-size: 30px;
+}
+
+.info h2 {
+  color: #f89e4a;
+  font-size: 48px;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.info h3 {
+  color: #f89e4a;
+  font-size: 28px;
+  font-weight: normal;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.info p {
+  color: #a9aeb9;
+  text-align: center;
+  font-size: 16px;
+}
+
+.form-contacto {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.mapa {
+  width: 100%;
+}
+
+.mapa iframe {
+  border: 0;
+  width: 100%;
+  height: 350px;
+}
+
+@media (min-width: 768px) {
+  .direction {
+    background-color: #2c2830;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+  }
+
+  .name {
+    display: flex;
+    gap: 8px;
+  }
+
+  .form-contacto {
+    margin: 50px;
+  }
+
+  .mapa iframe {
+    border: 0;
+    width: 100%;
+    height: 550px;
+  }
+}
+.form-contacto input,
+.form-contacto textarea {
+  padding: 15px;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #BDC7C9;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.btn-contacto {
+  margin-top: 30px;
+  display: block;
+  border-style: solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  color: #f89e4a;
+  border-color: #f89e4a;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0;
+  padding-top: 18px;
+  padding-right: 28px;
+  padding-bottom: 18px;
+  padding-left: 28px;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}

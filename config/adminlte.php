@@ -255,9 +255,9 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Informacio General',
+            'url'  => 'admin/empresa',
+            'icon' => 'fas fa-fw fa-utensils',
         ],
         [
             'text' => 'change_password',
