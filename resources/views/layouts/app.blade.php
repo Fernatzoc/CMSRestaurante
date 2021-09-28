@@ -71,7 +71,7 @@
 <div class='cursor3' id="cursor3"></div>
 
 
-<header>
+    @yield('image-header')
     <div class="filtro"></div>
     <div class="degradado"></div>
     <div>

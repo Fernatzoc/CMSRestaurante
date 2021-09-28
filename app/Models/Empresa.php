@@ -16,6 +16,8 @@ class Empresa extends Model
         'telefono',
         'facebook',
         'instagram',
+        'imagenHome',
+        'imgConocenos',
     ];
 
 }

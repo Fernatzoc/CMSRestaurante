@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('image-header')
+<header style="background-image: url('/storage/{{$empresa->imgConocenos}}');">
+@endsection
+
 @section('content')
 <section class="conocenos contenedor">
     <div>

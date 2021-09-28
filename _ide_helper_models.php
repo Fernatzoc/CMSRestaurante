@@ -20,6 +20,7 @@ namespace App\Models{
  * @property string $telefono
  * @property string $facebook
  * @property string $instagram
+ * @property string $imagenHome
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa newModelQuery()
@@ -29,6 +30,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereDireccion($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereFacebook($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImagenHome($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereInstagram($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereNombreEmpresa($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTelefono($value)

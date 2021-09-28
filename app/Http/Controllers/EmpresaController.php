@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Empresa;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
 
 class EmpresaController extends Controller
 {
@@ -77,9 +78,28 @@ class EmpresaController extends Controller
             'telefono'      => 'required',
             'facebook'      => 'required',
             'instagram'     => 'required', 
+            'imagenHome'   => 'image',
+            'imgConocenos'   => 'image',
+
         ]);
 
         $empresa = Empresa::find(1);
+
+        if( request('imagenHome')) {
+            $ruta_imagen = $request['imagenHome']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img->save();
+            $empresa->imagenHome = $ruta_imagen;
+        }
+
+        if( request('imgConocenos')) {
+            $ruta_imagen = $request['imgConocenos']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img->save();
+            $empresa->imgConocenos = $ruta_imagen;
+        }
+        
+        
 
         $empresa->nombreEmpresa = $data['nombreEmpresa'];
         $empresa->direccion = $data['direccion'];

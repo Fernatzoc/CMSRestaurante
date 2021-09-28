@@ -20,6 +20,8 @@ class CreateEmpresasTable extends Migration
             $table->char('telefono', 8);
             $table->char('facebook', 100);
             $table->char('instagram', 100);
+            $table->string('imagenHome');
+            $table->string('imgConocenos');
             $table->timestamps();
         });
     }

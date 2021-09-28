@@ -21,6 +21,8 @@ class EmpresaSeeder extends Seeder
             'telefono' => '58745896',
             'facebook' => 'https:://facebook.com/test',
             'instagram' => 'https:://instagram.com/test',
+            'imagenHome' => 'https://via.placeholder.com/468x60',
+            'imgConocenos' => 'https://via.placeholder.com/468x60',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
