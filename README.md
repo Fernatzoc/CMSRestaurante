@@ -4,7 +4,7 @@ git clone https://github.com/Fernatzoc/CMSRestaurante.git
 
 cd CMSRestaurante
 
-composer update
+composer install
 
 npm install
 
