@@ -41,7 +41,7 @@
 <div class="cd-header">
     <div class="icono_menu_movil">
         <div class="">
-            <a href="#"><img src="assets/imgs/logo_1.png" alt="logo Andrea's Cafe y Restaurante" width="50%" height="auto"></a>
+            <a href="#"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="50%" height="auto"></a>
         </div>
         <div class="">
             <div class="menu-icon hover-target">
@@ -78,7 +78,7 @@
         <div class="logo_navegacion">
 
             <div class="logo">
-                <a href="#"><img src="assets/imgs/logo_1.png" alt="logo Andrea's Cafe y Restaurante" width="100%" height="auto"></a>
+                <a href="#"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="100%" height="auto"></a>
             </div>
 
 
@@ -92,15 +92,13 @@
                     </ul>
                 </nav>
                 <div class="carrito">
-                    <img src="assets/icons/fontawesomePRO/cart.svg" alt="cart" width="30%" height="auto">
+                    {{-- <img src="assets/icons/fontawesomePRO/cart.svg" alt="cart" width="30%" height="auto"> --}}
                 </div>
             </div>
 
         </div>
         <div class="titulo_baner">
-            <div>
-                A Premium and Authentic Steak House
-            </div>
+            @yield('titulo')
         </div>
     </div>
 </header>

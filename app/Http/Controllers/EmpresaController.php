@@ -73,17 +73,33 @@ class EmpresaController extends Controller
     {
 
         $data = $request->validate([
-            'nombreEmpresa' => 'required',
-            'direccion'     => 'required',
-            'telefono'      => 'required',
-            'facebook'      => 'required',
-            'instagram'     => 'required', 
-            'imagenHome'   => 'image',
-            'imgConocenos'   => 'image',
+            'nombreEmpresa'    => 'required',
+            'direccion'        => 'required',
+            'telefono'         => 'required',
+            'facebook'         => 'required',
+            'instagram'        => 'required',
+            'conocenos'        => 'required',
+            'tituloHome'       => 'required',
+            'sobreNosotros'    => 'required',
+            'tituloConocenos'  => 'required',
+            'tituloMenu'       => 'required',
+            'tituloContacto'   => 'required',
+            'logo'             => 'image',
+            'imagenHome'       => 'image',
+            'imgConocenos'     => 'image',
+            'imgMenu'          => 'image',
+            'imgContacto'      => 'image',
 
         ]);
 
         $empresa = Empresa::find(1);
+
+        if( request('logo')) {
+            $ruta_imagen = $request['logo']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img->save();
+            $empresa->logo = $ruta_imagen;
+        }
 
         if( request('imagenHome')) {
             $ruta_imagen = $request['imagenHome']->store('upload-images', 'public');
@@ -98,10 +114,31 @@ class EmpresaController extends Controller
             $img->save();
             $empresa->imgConocenos = $ruta_imagen;
         }
+
+        if( request('imgMenu')) {
+            $ruta_imagen = $request['imgMenu']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img->save();
+            $empresa->imgMenu = $ruta_imagen;
+        }
+
+
+        if( request('imgContacto')) {
+            $ruta_imagen = $request['imgContacto']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img->save();
+            $empresa->imgContacto = $ruta_imagen;
+        }
         
         
 
         $empresa->nombreEmpresa = $data['nombreEmpresa'];
+        $empresa->conocenos = $data['conocenos'];
+        $empresa->tituloHome = $data['tituloHome'];
+        $empresa->sobreNosotros = $data['sobreNosotros'];
+        $empresa->tituloConocenos = $data['tituloConocenos'];
+        $empresa->tituloMenu = $data['tituloMenu'];
+        $empresa->tituloContacto = $data['tituloContacto'];
         $empresa->direccion = $data['direccion'];
         $empresa->telefono = $data['telefono'];
         $empresa->facebook = $data['facebook'];

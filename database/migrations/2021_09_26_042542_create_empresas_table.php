@@ -16,12 +16,21 @@ class CreateEmpresasTable extends Migration
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
             $table->text('nombreEmpresa', 25);
+            $table->string('logo');
             $table->char('direccion', 50);
             $table->char('telefono', 8);
             $table->char('facebook', 100);
             $table->char('instagram', 100);
+            $table->text('conocenos');
+            $table->text('sobreNosotros');
+            $table->string('tituloHome');
+            $table->string('tituloConocenos');
+            $table->string('tituloMenu');
+            $table->string('tituloContacto');
             $table->string('imagenHome');
             $table->string('imgConocenos');
+            $table->string('imgMenu');
+            $table->string('imgContacto');
             $table->timestamps();
         });
     }

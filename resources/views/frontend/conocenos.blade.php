@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('image-header')
-<header style="background-image: url('/storage/{{$empresa->imgConocenos}}');">
+    <header style="background-image: url('/storage/{{$empresa->imgConocenos}}');">
+@endsection
+
+@section('titulo')
+    <div>
+        {{$empresa->tituloConocenos}}
+    </div>
 @endsection
 
 @section('content')
@@ -14,11 +20,7 @@
         <div class="titulohistoria">
             <h2>Nuestra Historia</h2>
             <div class="nuestrahistoria">
-                <h3>Most loved steak house since 1985 </h3>
-                <p>Our steak story dates back to 1985 when James, a steak lover himself, had the urge of serving the most delicious recipes for foodies like him. It was then that he met Steve, a passionate chef who shared similar interests.
-                    They started a small food let that offered takeaways only.</p>
-                <p>Seeing the love the city had for steak, they expanded their team with 8 more chefs from different parts of the country so we could serve more variety on the table. .
-                    Ever since, we’ve been known as the best Steak house in town serving over 1000 customers everyday. Humbled by the love we’ve received, we strive to continue giving you the best.</p>
+                {!! $empresa->conocenos !!}
             </div>
         </div>
     </div>

@@ -20,20 +20,38 @@ namespace App\Models{
  * @property string $telefono
  * @property string $facebook
  * @property string $instagram
+ * @property string $conocenos
+ * @property string $sobreNosotros
+ * @property string $tituloHome
+ * @property string $tituloConocenos
+ * @property string $tituloMenu
+ * @property string $tituloContacto
  * @property string $imagenHome
+ * @property string $imgConocenos
+ * @property string $imgMenu
+ * @property string $imgContacto
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereConocenos($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereDireccion($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereFacebook($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImagenHome($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgConocenos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgContacto($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgMenu($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereInstagram($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereNombreEmpresa($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereSobreNosotros($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTelefono($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTituloConocenos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTituloContacto($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTituloHome($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTituloMenu($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereUpdatedAt($value)
  */
 	class Empresa extends \Eloquent {}

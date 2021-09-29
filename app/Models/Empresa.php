@@ -12,12 +12,21 @@ class Empresa extends Model
 
     protected $fillable = [
         'nombreEmpresa',
+        'logo',
         'direccion',
         'telefono',
         'facebook',
         'instagram',
+        'conocenos',
+        'sobreNosotros',
+        'tituloHome',
+        'tituloConocenos',
+        'tituloMenu',
+        'tituloContacto',
         'imagenHome',
         'imgConocenos',
+        'imgMenu',
+        'imgContacto',
     ];
 
 }

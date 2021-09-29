@@ -4,6 +4,12 @@
 <header style="background-image: url('/storage/{{$empresa->imagenHome}}');">
 @endsection
 
+@section('titulo')
+    <div>
+        {{$empresa->tituloHome}}
+    </div>
+@endsection
+
 @section('content')
 <section class="bienvenida contenedor">
     {{$empresa}}
@@ -11,8 +17,7 @@
     <div class="texto-historia">
         <div class="imagen-acercade"> <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/about.jpg " alt=""></div>
         <div class="historia-restaurante">
-            <h2>A Cerca De Nosotros</h2>
-            <p> Nuestro viaje comenzó en 1985 cuando James, un amante de la carne, exploró varias recetas de todo el mundo y las reunió en nuestro menú. Desde que ahora somos un equipo de 10 chefs expertos de 3 de las principales ciudades de la India, le servimos los mejores bistecs, postres y cócteles sin alcohol de la ciudad.</p>
+            {!! $empresa->sobreNosotros !!}
             <button class="btn-reservation">Book a Table</button>
         </div>
     </div>

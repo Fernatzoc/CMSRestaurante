@@ -25,7 +25,7 @@ class EmpresaProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['layouts.app', 'frontend.index', 'frontend.conocenos'], function($view)
+        View::composer(['layouts.app', 'frontend.index', 'frontend.conocenos', 'frontend.menu', 'frontend.contacto'], function($view)
         {
             $empresa = Empresa::take(1)->first();
             $view->with('empresa', $empresa);
