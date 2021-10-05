@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Frontend\PagesController;
 
@@ -27,3 +28,8 @@ Route::get('/contacto', [PagesController::class, 'contacto'])->name('pages.conta
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('storage-link', function (){
+    Artisan::call('storage:link');
+    echo 'ok';
+});
