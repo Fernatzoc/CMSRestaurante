@@ -21,9 +21,9 @@ Route::get('/conocenos', [PagesController::class, 'conocenos'])->name('pages.con
 Route::get('/menu', [PagesController::class, 'menu'])->name('pages.menu');
 Route::get('/contacto', [PagesController::class, 'contacto'])->name('pages.contacto');
 
-/* Route::get('/admin', function () {
+ Route::get('/admin', function () {
     return view('admin.index');
-}); */
+}); 
 
 Auth::routes();
 
