@@ -3,8 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Database\Seeders\UserSeeder;
-use Database\Seeders\EmpresaSeeder;
+use Database\Seeders\{UserSeeder,EmpresaSeeder};
+use App\Models\Category;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +19,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(UserSeeder::class);
         $this->call(EmpresaSeeder::class);
+        Category::factory(30)->create();
     }
 }

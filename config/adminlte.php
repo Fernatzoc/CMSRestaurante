@@ -264,6 +264,22 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
+
+        [
+            'text'    => 'Menu',
+            'icon'    => 'fas fa-hamburger',
+            'submenu' => [
+                [
+                    'text' => 'Categoria',
+                    'url'  => 'category',
+                ],
+                [
+                    'text' => 'Platillos',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\{HomeController,CategoryController};
 use App\Http\Controllers\Frontend\PagesController;
 
 /*
@@ -33,3 +33,6 @@ Route::get('storage-link', function (){
     Artisan::call('storage:link');
     echo 'ok';
 });
+
+
+Route::resource('category', CategoryController::class)->middleware('auth');
