@@ -275,7 +275,7 @@ return [
                 ],
                 [
                     'text' => 'Platillos',
-                    'url'  => '#',
+                    'url'  => 'meal',
                 ],
             ],
         ],

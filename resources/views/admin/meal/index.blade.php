@@ -2,13 +2,14 @@
 
 @section('content')
 
+
 <div class="pt-3">
     <div>
         <div>
             <div class="card">
                 <div class="card-header">
-                    Categorias del Menu
-                    <a href="{{ route('category.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>
+                    Platillos del Menu
+                    <a href="{{ route('meal.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>
                 </div>
 
                 <div class="card-body">
@@ -23,20 +24,23 @@
                             <tr>
                                 <th>ID</th>
                                 <th>IMAGEN</th>
-                                <th>NOMBRE CATEGORIA</th>
+                                <th>NOMBRE</th>
+                                <th>DESCRIPCIÓN</th>
+                                <th>PRECIO</th>
+                                <th>CATEGORIA</th>
                                 <th colspan="2">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($categories as $category)
+                            @foreach($meals as $meal)
 
                                 <tr>
 
-                                    <td><strong>{{ $category->id }}</strong></td>
+                                    <td><strong>{{ $meal->id }}</strong></td>
                                     <td>
-                                        @if($category->image)
+                                        @if($meal->image)
 
-                                        <img src="{{ $category->get_image }}" height="auto" width="100px" alt="imagen_category">
+                                        <img src="{{ $meal->get_image }}" height="auto" width="100px" alt="imagen_meal">
                 
                                         @else
 
@@ -44,12 +48,15 @@
 
                                         @endif
                                     </td>
-                                    <td>{{ $category->name }}</td>
+                                    <td>{{ $meal->name }}</td>
+                                    <td>{{ $meal->description }}</td>
+                                    <td>{{ $meal->price }} Q</td>
+                                    <td>{{ $meal->category->name }}</td>
                                     <td>
-                                        <a href="{{ route('category.edit', $category) }}">Editar</a>
+                                        <a href="{{ route('meal.edit', $meal) }}">Editar</a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('category.destroy', $category) }}" method="POST">
+                                        <form action="{{ route('meal.destroy', $meal) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <input type="submit" value="Eliminar" onclick="return confirm('Desea eliminar?')">
@@ -62,7 +69,7 @@
                     </table>
                     
                     <div class="mt-3">
-                            {{ $categories->links('pagination::bootstrap-4') }}
+                            {{ $meals->links('pagination::bootstrap-4') }}
                     </div>
 
                 </div>
@@ -70,5 +77,6 @@
         </div>
     </div>
 </div>
+
 
 @endsection
