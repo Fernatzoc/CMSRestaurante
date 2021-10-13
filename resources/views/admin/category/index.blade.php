@@ -32,7 +32,7 @@
 
                                 <tr>
 
-                                    <td>{{ $category->id }}</td>
+                                    <td><strong>{{ $category->id }}</strong></td>
                                     <td>
                                         @if($category->image)
 

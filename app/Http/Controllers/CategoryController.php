@@ -70,7 +70,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('admin.category.edit', compact('category'));
     }
 
     /**
@@ -82,7 +82,20 @@ class CategoryController extends Controller
      */
     public function update(CategoryRequest $CategoryRequest, Category $category)
     {
-        //
+        
+        $img_actual = $category->image;
+        
+        $category->update($CategoryRequest->all());
+
+        if($CategoryRequest->file('image')){
+
+            Storage::disk('public')->delete($img_actual);
+            
+            $category->image = $CategoryRequest->file('image')->store('categories', 'public'); //almacenar la img y retornar la url 
+            $category->save();
+        }
+
+        return back()->with('status', 'Categoria Actualizada');
     }
 
     /**

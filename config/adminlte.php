@@ -270,7 +270,7 @@ return [
             'icon'    => 'fas fa-hamburger',
             'submenu' => [
                 [
-                    'text' => 'Categoria',
+                    'text' => 'Categorias',
                     'url'  => 'category',
                 ],
                 [
