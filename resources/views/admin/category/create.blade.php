@@ -25,6 +25,10 @@
                             <input type="file" name="image">
                         </div>
                         <div>
+                            <label>Sección</label>
+                            <input type="text" name="section" required> 
+                        </div>
+                        <div>
                             @csrf
                             <input type="submit" value="Crear" class="btn btn-sm btn-primary">
                         </div>

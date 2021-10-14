@@ -23,7 +23,8 @@
                             <tr>
                                 <th>ID</th>
                                 <th>IMAGEN</th>
-                                <th>NOMBRE CATEGORIA</th>
+                                <th>NOMBRE</th>
+                                <th>SECCIÓN</th>
                                 <th colspan="2">&nbsp;</th>
                             </tr>
                         </thead>
@@ -45,6 +46,7 @@
                                         @endif
                                     </td>
                                     <td>{{ $category->name }}</td>
+                                    <td>{{ $category->section }}</td>
                                     <td>
                                         <a href="{{ route('category.edit', $category) }}">Editar</a>
                                     </td>

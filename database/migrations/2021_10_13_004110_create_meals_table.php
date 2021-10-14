@@ -20,10 +20,7 @@ class CreateMealsTable extends Migration
             $table->string('price')->default('00');
             $table->string('image')->nullable();
             $table->string('description');
-<<<<<<< HEAD
             $table->string('active')->default('on');
-=======
->>>>>>> 486eaed33031ba57023870fa59e2d2e54ee94a0d
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

@@ -30,6 +30,10 @@
                             <input type="file" name="image">
                         </div>
                         <div>
+                            <label>Sección</label>
+                            <input type="text" name="section" value="{{ old('section', $category->section) }}" required> 
+                        </div>
+                        <div>
                             @csrf
                             @method('PUT')
                             <input type="submit" value="Actualizar" class="btn btn-sm btn-primary">

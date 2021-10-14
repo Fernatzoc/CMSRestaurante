@@ -32,6 +32,7 @@
     
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    @livewireStyles
 
 </head>
 
@@ -169,6 +170,8 @@
     </div>
 
 </footer>
+
+@livewireScripts
 
 </body>
 </html>
