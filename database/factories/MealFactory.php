@@ -26,7 +26,8 @@ class MealFactory extends Factory
             'name' => $this->faker->word(),
             'price' => rand(20,150),
             'description' => $this->faker->sentence(),
-            'active' => 'on'
+            'active' => 'on',
+            'description' => $this->faker->sentence()
         ];
     }
 }

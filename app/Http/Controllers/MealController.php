@@ -90,7 +90,7 @@ class MealController extends Controller
         $meal->active = 'off'; //se setea off si el checkbox no existe ne el request
         
         $meal->update( $request->all() );
-        
+
         if($request->file('image')){
 
             Storage::disk('public')->delete($img_actual);

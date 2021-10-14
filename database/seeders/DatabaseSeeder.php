@@ -20,6 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(EmpresaSeeder::class);
         Category::factory(4)->create();
+<<<<<<< HEAD
         Meal::factory(8)->create();
+=======
+        Meal::factory(20)->create();
+>>>>>>> 486eaed33031ba57023870fa59e2d2e54ee94a0d
     }
 }
