@@ -9,7 +9,7 @@ class MenuSection extends Component
 {
     public function render()
     {
-        $categories = Category::latest()->with('meals')->orderby('section')->get();
+        $categories = Category::with('meals')->orderby('section')->get();
 
         return view('livewire.menu-section', compact('categories')); 
     }

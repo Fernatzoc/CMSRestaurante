@@ -15,7 +15,7 @@ class CreateMealsTable extends Migration
     {
         Schema::create('meals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->string('name');
             $table->string('price')->default('00');
             $table->string('image')->nullable();
@@ -23,7 +23,7 @@ class CreateMealsTable extends Migration
             $table->string('active')->default('on');
             $table->timestamps();
 
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null');
         });
     }
 

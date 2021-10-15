@@ -52,13 +52,19 @@
                                     <td>{{ $meal->name }}</td>
                                     <td>{{ $meal->description }}</td>
                                     <td>{{ $meal->price }} Q</td>
-                                    <td>{{ $meal->category->name }}</td>
+                                    <td>
+                                        @if($meal->category)
+                                            {{ $meal->category->name }}
+                                        @else
+                                            <i class="far fa-circle" style="color:#ffc107; font-size: 18px "></i>
+                                        @endif
+                                    </td>
                                     <td>
 
                                     @if( @$meal->active == 'on' ) 
                                     <i class="fas fa-check" style="color: rgb(117, 175, 0); font-size: 18px"></i>
                                     @else
-                                    <i class="far fa-circle" style="color: rgb(228, 121, 0); font-size: 18px "></i>
+                                    <i class="far fa-circle" style="color:#ffc107; font-size: 18px "></i>
                                     @endif
 
                                     </td>

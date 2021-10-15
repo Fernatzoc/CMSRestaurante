@@ -48,7 +48,12 @@
                         <div>
                             <label for="category">Categoria Platillo</label>
                             <select name="category_id" required>
+
+                                @if($meal->category)
                                 <option value="{{ $meal->category->id }}"> {{ $meal->category->name }} </option>
+                                @else
+                                <option value="null"></option>
+                                @endif
                                 @foreach($categories as $category)
                                 
                                         @continue( @$category->id == @$meal->category->id )

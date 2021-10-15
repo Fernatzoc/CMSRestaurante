@@ -26,8 +26,7 @@ class MealRequest extends FormRequest
         return [
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required',
-            'category_id' => 'required'
+            'price' => 'required'
 
         ];
     }
