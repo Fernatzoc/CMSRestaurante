@@ -21,196 +21,334 @@
 
 @section('content')
 
+    <h2 class="text-center mb-5">Informacion General</h2>
 
-    <form method="POST" action="{{ route('empresa.update') }}" enctype="multipart/form-data" >
-        @csrf
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <form method="POST" action="{{ route('empresa.update') }}" enctype="multipart/form-data" novalidate>
+                @csrf
+        
+                @method('PUT')
 
-        @method('PUT')
+                <div class="form-group">
+                    <label for="nombreEmpresa" >Nombre Empresa:</label>
+                    <input
+                        class="form-control @error('nombreEmpresa') is-invalid @enderror"
+                        type="text" 
+                        name="nombreEmpresa"
+                        id="nombreEmpresa"
+                        value="{{ $empresa->nombreEmpresa }}"
+                    >
 
-        <fieldset>
+                    @error('nombreEmpresa')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                
+                </div>
+
+                <div class="form-group">
+                    <label for="logo">Logo</label>
+                    <input 
+                        class="form-control @error('logo') is-invalid @enderror"
+                        type="file"
+                        id="logo"
+                        name="logo"
+                    >
+
+                    @error('logo')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
             
-            <legend>Informacion General</legend>
-      
-            <label for="nombreEmpresa" >Nombre Empresa:</label>
-            <input 
-                type="text" 
-                name="nombreEmpresa"
-                id="nombreEmpresa"
-                value="{{ $empresa->nombreEmpresa }}"
-            >
-        
-            <label for="logo">Logo</label>
-            <input 
-                type="file"
-                id="logo"
-                name="logo"
-            >
+                    <div>
+                        <p>Imagen Actual</p>
+                        <img src="/storage/{{$empresa->logo}}" style="width: 300px">
+                    </div>
+                </div>
 
-            <div>
-                <p>Imagen Actual</p>
-                <img src="/storage/{{$empresa->logo}}" style="width: 300px">
-            </div>
+                <div class="form-group">
+                    <label for="direccion" >Direccion:</label>
+                    <input
+                        class="form-control @error('direccion') is-invalid @enderror" 
+                        type="text"
+                        name="direccion"
+                        id="direccion"
+                        value="{{ $empresa->direccion }}"
+                    >
+
+                    @error('direccion')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="telefono" >Telefono:</label>
+                    <input
+                        class="form-control @error('telefono') is-invalid @enderror" 
+                        type="text"
+                        name="telefono"
+                        id="telefono"
+                        value="{{ $empresa->telefono }}"
+                    >
+
+                    @error('telefono')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="horarios" >Horarios:</label>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p class="font-weight-bold">Dia</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <p class="font-weight-bold">Apertura</p>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <p class="font-weight-bold">Cierre</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Lunes</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openMonday') is-invalid @enderror" 
+                            type="time"
+                            name="openMonday"
+                            id="openMonday"
+                            value="{{ $horarios[0]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeMonday') is-invalid @enderror" 
+                            type="time"
+                            name="closeMonday"
+                            id="closeMonday"
+                            value="{{ $horarios[0]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Martes</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openTuesday') is-invalid @enderror" 
+                            type="time"
+                            name="openTuesday"
+                            id="openTuesday"
+                            value="{{ $horarios[1]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeTuesday') is-invalid @enderror" 
+                            type="time"
+                            name="closeTuesday"
+                            id="closeTuesday"
+                            value="{{ $horarios[1]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Miercoles</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openWednesday') is-invalid @enderror" 
+                            type="time"
+                            name="openWednesday"
+                            id="openWednesday"
+                            value="{{ $horarios[2]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeWednesday') is-invalid @enderror" 
+                            type="time"
+                            name="closeWednesday"
+                            id="closeWednesday"
+                            value="{{ $horarios[2]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Jueves</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openThursdays') is-invalid @enderror" 
+                            type="time"
+                            name="openThursdays"
+                            id="openThursdays"
+                            value="{{ $horarios[3]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeThursdays') is-invalid @enderror" 
+                            type="time"
+                            name="closeThursdays"
+                            id="closeThursdays"
+                            value="{{ $horarios[3]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Viernes</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openFriday') is-invalid @enderror" 
+                            type="time"
+                            name="openFriday"
+                            id="openFriday"
+                            value="{{ $horarios[4]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeFriday') is-invalid @enderror" 
+                            type="time"
+                            name="closeFriday"
+                            id="closeFriday"
+                            value="{{ $horarios[4]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Sabado</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openSaturday') is-invalid @enderror" 
+                            type="time"
+                            name="openSaturday"
+                            id="openSaturday"
+                            value="{{ $horarios[5]->open_time }}">
+                        </div>
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeSaturday') is-invalid @enderror" 
+                            type="time"
+                            name="closeSaturday"
+                            id="closeSaturday"
+                            value="{{ $horarios[5]->close_time }}"
+                        >
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-1 mr-4">
+                            <p>Domingo</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('openSunday') is-invalid @enderror" 
+                            type="time"
+                            name="openSunday"
+                            id="openSunday"
+                            value="{{ $horarios[6]->open_time }}"
+                        >
+                        </div>
+
+                        <div class="col-sm-4">
+                            <input
+                            class="form-control @error('closeSunday') is-invalid @enderror" 
+                            type="time"
+                            name="closeSunday"
+                            id="closeSunday"
+                            value="{{ $horarios[6]->close_time }}"
+                        >
+                        </div>
+                    </div>
 
 
-            <label for="direccion" >Direccion:</label>
-            <input 
-                type="text"
-                name="direccion"
-                id="direccion"
-                value="{{ $empresa->direccion }}"
-            >
-        
-            <label for="telefono" >Telefono:</label>
-            <input 
-                type="text"
-                name="telefono"
-                id="telefono"
-                value="{{ $empresa->telefono }}"
-            >
-        
-            <label for="facebook" >Facebook:</label>
-            <input 
-                type="text"
-                name="facebook"
-                id="facebook"
-                value="{{ $empresa->facebook }}"
-            >
-        
-            <label for="urlInstagram" >Instagram:</label>
-            <input 
-                type="text"
-                name="instagram"
-                id="instagram"
-                value="{{ $empresa->instagram }}"
-            >
-        
-        </fieldset>
-      
+                </div>
 
-        <fieldset>
-            
-            <legend>Pagina de Inicio</legend>
+                <div class="form-group">
+                    <label for="facebook" >Facebook:</label>
+                    <input 
+                        class="form-control @error('facebook') is-invalid @enderror" 
+                        type="text"
+                        name="facebook"
+                        id="facebook"
+                        value="{{ $empresa->facebook }}"
+                    >
 
-            <label for="tituloHome" >Titulo Pagina:</label>
-            <input 
-                type="text"
-                name="tituloHome"
-                id="tituloHome"
-                value="{{ $empresa->tituloHome }}"
-            >
+                    @error('facebook')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
 
-            <label for="sobreNosotros"></label>
-            <textarea id="sobreNosotros" name="sobreNosotros">{{ $empresa->sobreNosotros }}</textarea>
-            
-            <label for="imagenHome">Imagen Fondo</label>
-            <input 
-                type="file"
-                id="imagenHome"
-                name="imagenHome"
-            >
+                </div>
 
-            <div>
-                <p>Imagen Actual</p>
-                <img src="/storage/{{$empresa->imagenHome}}" style="width: 300px">
-            </div>
+                <div class="form-group">
 
-        
-        </fieldset>
+                    <label for="urlInstagram" >Instagram:</label>
+                    <input
+                        class="form-control @error('instagram') is-invalid @enderror" 
+                        type="text"
+                        name="instagram"
+                        id="instagram"
+                        value="{{ $empresa->instagram }}"
+                    >
 
+                    @error('instagram')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+                </div>
 
-        <fieldset>
-            
-            <legend>Pagina Conocenos</legend>
-
-            <label for="tituloConocenos" >Titulo Pagina:</label>
-            <input 
-                type="text"
-                name="tituloConocenos"
-                id="tituloConocenos"
-                value="{{ $empresa->tituloConocenos }}"
-            >
-
-            <label for="conocenos"></label>
-            <textarea id="conocenos" name="conocenos">{{ $empresa->conocenos }}</textarea>
-      
-            <label for="imgConocenos">Imagen Fondo</label>
-            <input 
-                type="file"
-                id="imgConocenos"
-                name="imgConocenos"
-            >
-
-            <div>
-                <p>Imagen Actual</p>
-                <img src="/storage/{{$empresa->imgConocenos}}" style="width: 300px">
-            </div>
-
-        
-        </fieldset>
-
-
-        <fieldset>
-            
-            <legend>Pagina Menu</legend>
-
-            <label for="tituloMenu" >Titulo Pagina:</label>
-            <input 
-                type="text"
-                name="tituloMenu"
-                id="tituloMenu"
-                value="{{ $empresa->tituloMenu }}"
-            >
-
-            <label for="imgMenu">Imagen Fondo</label>
-            <input 
-                type="file"
-                id="imgMenu"
-                name="imgMenu"
-            >
-
-            <div>
-                <p>Imagen Actual</p>
-                <img src="/storage/{{$empresa->imgMenu}}" style="width: 300px">
-            </div>
-      
-
-        
-        </fieldset>
-
-
-        <fieldset>
-            
-            <legend>Pagina Contacto</legend>
-
-            <label for="tituloContacto" >Titulo Pagina:</label>
-            <input 
-                type="text"
-                name="tituloContacto"
-                id="tituloContacto"
-                value="{{ $empresa->tituloContacto }}"
-            >
-
-            <label for="imgContacto">Imagen Fondo</label>
-            <input 
-                type="file"
-                id="imgContacto"
-                name="imgContacto"
-            >
-
-            <div>
-                <p>Imagen Actual</p>
-                <img src="/storage/{{$empresa->imgContacto}}" style="width: 300px">
-            </div>
-      
-
-        
-        </fieldset>
-
-
-
-        <button type="submit">Guardar</button>
-    </form>
-    
-
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+                      
+            </form>
+        </div>
+    </div>
 
 @stop

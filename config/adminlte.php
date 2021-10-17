@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => 'Andrea\'s C. y R.',
-    'logo_img' => '/storage/upload-images/logo_1.png',
+    // 'logo_img' => '/storage/upload-images/logo_1.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -246,28 +246,55 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
+/*         [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
-        ],
+        ], */
         ['header' => 'account_settings'],
-        [
-            'text' => 'Informacio General',
-            'url'  => 'admin/empresa',
-            'icon' => 'fas fa-fw fa-utensils',
-        ],
-        [
+/*         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ], */
+
+        [
+            'text'    => 'Paginas',
+            'icon'    => 'fas fa-fw fa-thumbtack',
+            'submenu' => [
+                [
+                    'text' => 'General',
+                    'url'  => 'admin/general',
+                    'icon' => 'fas fa-fw fa-arrow-right',
+                ],
+                [
+                    'text' => 'Inicio',
+                    'url'  => 'admin/home',
+                    'icon' => 'fas fa-fw fa-arrow-right',
+                ],
+                [
+                    'text' => 'Conocenos',
+                    'url'  => 'admin/conocenos',
+                    'icon' => 'fas fa-fw fa-arrow-right',
+                ],
+                [
+                    'text' => 'Menu',
+                    'url'  => 'admin/menu',
+                    'icon' => 'fas fa-fw fa-arrow-right',
+                ],
+                [
+                    'text' => 'Contacto',
+                    'url'  => 'admin/contacto',
+                    'icon' => 'fas fa-fw fa-arrow-right',
+                ],
+            ],
         ],
 
         [
             'text'    => 'Menu',
-            'icon'    => 'fas fa-hamburger',
+            'icon'    => 'fas fa-fw fa-hamburger',
             'submenu' => [
                 [
                     'text' => 'Categorias',
@@ -280,7 +307,7 @@ return [
             ],
         ],
         
-        [
+/*         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -333,7 +360,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*

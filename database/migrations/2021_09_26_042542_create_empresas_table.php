@@ -33,6 +33,14 @@ class CreateEmpresasTable extends Migration
             $table->string('imgContacto');
             $table->timestamps();
         });
+
+        Schema::create('horarios', function (Blueprint $table) {
+            $table->id();
+            $table->integer('day');
+            $table->time('open_time');
+            $table->time('close_time');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -43,5 +51,6 @@ class CreateEmpresasTable extends Migration
     public function down()
     {
         Schema::dropIfExists('empresas');
+        Schema::dropIfExists('horarios');
     }
 }

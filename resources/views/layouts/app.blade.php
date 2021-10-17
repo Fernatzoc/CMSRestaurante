@@ -114,6 +114,7 @@
 
 
     {{$empresa}}
+    {{$horarios}}
 
     <div class="footer-part-1">
 
@@ -153,15 +154,30 @@
         <div class="widget-2">
             <img src="./assets/imgs/food-1.jpg" alt="Mesas">
         </div>
+
+        @php
+            $open = [];
+            for ($i = 0; $i < 7; $i++) {
+                array_push($open, date('h:i a', strtotime($horarios[$i]->open_time)));
+            }
+
+            $close = [];
+            for ($i = 0; $i < 7; $i++) {
+                array_push($close, date('h:i a', strtotime($horarios[$i]->close_time)));
+            }
+        @endphp
+
+
         <div class="widget-3">
             <h3>Horarios</h3>
-            <p>Lunes: 11AM - 11PM</p>
-            <p>Martes: 11AM - 11PM</p>
-            <p>Miercoles: 11AM - 11PM</p>
-            <p>Jueves: 11AM - 11PM</p>
-            <p>Viernes: 11AM - 11PM</p>
-            <p>Sabado: 11AM - 01AM</p>
-            <p>Domingo: 11AM - 01AM</p>
+            <p>Lunes:  {{$open[0]}}  -  {{$close[0]}}</p>
+            <p>Martes: {{$open[1]}}  -  {{$close[1]}}</p>
+            <p>Miercoles: {{$open[2]}}  -  {{$close[2]}}</p>
+            <p>Jueves: {{$open[3]}}  -  {{$close[3]}}</p>
+            <p>Viernes: {{$open[4]}}  - {{$close[4]}}</p>
+            <p>Sábado: {{$open[5]}}  -  {{$close[5]}}</p>
+            <p>Domingo: {{$open[6]}}  - {{$close[6]}}</p>
+
         </div>
     </div>
 
