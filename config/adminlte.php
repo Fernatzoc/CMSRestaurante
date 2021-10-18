@@ -267,7 +267,11 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ], */
-
+        [
+            'text' => 'Usuarios',
+            'url'  => 'admin/users',
+            'icon' => 'far fa-fw fa-user',
+        ],
         [
             'text'    => 'Paginas',
             'icon'    => 'fas fa-fw fa-thumbtack',
