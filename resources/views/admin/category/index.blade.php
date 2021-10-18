@@ -25,7 +25,7 @@
                                 <th>IMAGEN</th>
                                 <th>NOMBRE</th>
                                 <th>SECCIÓN</th>
-                                <th colspan="2">&nbsp;</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,14 +47,14 @@
                                     </td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->section }}</td>
-                                    <td>
-                                        <a href="{{ route('category.edit', $category) }}">Editar</a>
-                                    </td>
-                                    <td>
+                                    <td class="d-flex ">
+                                        <a href="{{ route('category.edit', $category) }}" class="btn btn-warning mr-2"><i class="far fa-edit"></i></a>
                                         <form action="{{ route('category.destroy', $category) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" value="Eliminar" onclick="return confirm('Desea eliminar?')">
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Desea eliminar?')">
+                                                <i class="fas fas fa-trash-alt"></i>
+                                            </button>
                                         </form>
                                     </td>
                                 </tr>
