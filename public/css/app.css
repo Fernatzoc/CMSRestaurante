@@ -10361,6 +10361,7 @@ header > div {
   display: flex;
   padding: 5% 10% 5% 5%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu-icon {
@@ -10416,7 +10417,7 @@ header > div {
 }
 
 .nav:after {
-  background: var(--fondo1);
+  background-color: #1d1922;
   transition-delay: 0s;
 }
 

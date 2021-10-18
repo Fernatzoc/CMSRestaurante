@@ -252,7 +252,6 @@ return [
             'icon'        => 'far fa-fw fa-file',
             'label'       => 4,
             'label_color' => 'success',
-<<<<<<< HEAD
         ],
         // ['header' => 'account_settings'],
         [
@@ -261,11 +260,9 @@ return [
             'icon' => 'fas fa-fw fa-utensils',
         ],
         [
-=======
         ], */
         ['header' => 'account_settings'],
 /*         [
->>>>>>> f7df7d4bc02648b9cb34fffd2f551c769e874010
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
