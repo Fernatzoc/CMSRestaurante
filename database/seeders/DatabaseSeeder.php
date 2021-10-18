@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Database\Seeders\{UserSeeder,EmpresaSeeder};
-use App\Models\{Category,Meal};
+use App\Models\{Category,Meal,Events};
 
 
 class DatabaseSeeder extends Seeder
@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(EmpresaSeeder::class);
         Category::factory(4)->create();
         Meal::factory(8)->create();
+        Events::factory(2)->create();
     }
 }

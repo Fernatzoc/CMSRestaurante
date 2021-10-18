@@ -11,7 +11,9 @@
 @endsection
 
 @section('content')
+
 <section class="bienvenida contenedor">
+
     {{$empresa}}
     <h1>Bienvenidos A Andrea's Cafe y Restaurante</h1>
     <div class="texto-historia">
@@ -21,10 +23,12 @@
             <button class="btn-reservation">Book a Table</button>
         </div>
     </div>
+
+    <livewire:events-section>
     
 </section>
 
-<section class="platillos">
+<section class="platillos">   
     <h1>Nuestras Delicias Destacadas</h1>
     <div class="listado-platillos contenedor" >
         <div class="platillo">

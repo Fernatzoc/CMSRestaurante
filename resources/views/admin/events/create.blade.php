@@ -6,7 +6,7 @@
     <div>
         <div>
             <div class="card">
-                <div class="card-header">Crear Platillo</div>
+                <div class="card-header">Crear Evento</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,32 +15,22 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('meal.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('events.store') }}" method="POST" enctype="multipart/form-data">
                         <div>
-                            <label>Nombre</label>
-                            <input type="text" name="name" required> 
+                            <label>Titulo</label>
+                            <input type="text" name="title" required> 
                         </div>
                         <div>
                             <label for="image">Imagen</label>
-                            <input type="file" name="image" required>
+                            <input type="file" name="image">
                         </div>
                         <div>
                             <label for="description">Descripción</label>
                             <textarea name="description" id="" cols="60" rows="10" required></textarea>
                         </div>
                         <div>
-                            <label for="price">Precio</label>
-                            <input type="text" name="price" placeholder="100" required>
-                            <span>.Q</span>
-                        </div>
-                        <div>
-                            <label for="category">Categoria Platillo</label>
-                            <select name="category_id" required>
-                                <option value="">Seleccionar Categoria</option>
-                                @foreach($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
+                            <label for="price">Fecha</label>
+                            <input type="text" name="date" required>
                         </div>
                         <div>
                             @csrf

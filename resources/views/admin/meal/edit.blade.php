@@ -30,7 +30,9 @@
                         </div>
                         <div>
                             <label for="description">Descripción</label>
-                            <input type="text" name="description" required value="{{ old('description', $meal->description) }}">
+                            <textarea name="description" id="" cols="60" rows="10" required>
+                                {{ old('description', $meal->description) }}
+                            </textarea>
                         </div>
                         <div>
                             <label for="price">Precio</label>

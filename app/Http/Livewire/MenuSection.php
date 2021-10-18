@@ -11,6 +11,8 @@ class MenuSection extends Component
     {
         $categories = Category::with('meals')->orderby('section')->get();
 
+        // dd($categories);
+
         return view('livewire.menu-section', compact('categories')); 
     }
 }

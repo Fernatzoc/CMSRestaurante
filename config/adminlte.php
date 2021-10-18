@@ -253,7 +253,7 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        // ['header' => 'account_settings'],
         [
             'text' => 'Informacio General',
             'url'  => 'admin/empresa',
@@ -278,6 +278,11 @@ return [
                     'url'  => 'meal',
                 ],
             ],
+        ],
+        [
+            'text' => 'Eventos',
+            'url'  => 'events',
+            'icon' => 'far fa-calendar-alt',
         ],
         
         [

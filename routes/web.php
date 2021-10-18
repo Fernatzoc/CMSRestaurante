@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\{HomeController,CategoryController,MealController};
+use App\Http\Controllers\{HomeController,CategoryController,MealController,EventsController};
 use App\Http\Controllers\Frontend\PagesController;
 
 /*
@@ -35,6 +35,8 @@ Route::get('storage-link', function (){
 });
 
 
-Route::resource('category', CategoryController::class)->middleware('auth');
-Route::resource('meal', MealController::class)->middleware('auth');
+Route::resource('category', CategoryController::class)->except('show')->middleware('auth');
+Route::resource('meal', MealController::class)->except('show')->middleware('auth');
+Route::resource('events', EventsController::class)->except('show')->middleware('auth');
+
 
