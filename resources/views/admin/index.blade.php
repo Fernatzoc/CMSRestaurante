@@ -3,8 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard Test</h1>
-    <h1>Dashboard Test</h1>
+    <h1>Administrador Andrea's Cafe y Restaurante</h1>
 @stop
 
 @section('content')

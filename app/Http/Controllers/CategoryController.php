@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\CategoryRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 
 class CategoryController extends Controller
@@ -14,9 +15,11 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $categories = Category::latest()->paginate(10);
+        $categories = Category::latest()
+        ->where('name', 'LIKE', "%$request->adminlteSearch%" )
+        ->paginate(10);
 
         return view('admin.category.index', compact('categories'));
     }

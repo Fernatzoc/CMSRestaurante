@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\{Meal,Category};
 use App\Http\Requests\MealRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class MealController extends Controller
 {
@@ -13,9 +14,12 @@ class MealController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $meals = Meal::latest()->paginate(15);
+
+        $meals = Meal::latest()
+        ->where('name', 'LIKE', "%$request->adminlteSearch%" )
+        ->paginate(15);
 
         return view('admin.meal.index', compact('meals'));
     }

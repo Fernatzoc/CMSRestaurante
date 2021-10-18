@@ -10,7 +10,7 @@ class RandomMeals extends Component
     public function render()
     {
         $meals = Meal::inRandomOrder()->get()
-        ->where('price','>','22')
+        ->where('price','>','25')
         ->where('active','=','on')
         ->where('category_id', '!=', null) 
         ->take(4); 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Events;
 use App\Http\Requests\EventsRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class EventsController extends Controller
 {
@@ -13,10 +14,12 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $events = Events::latest()->get();
+        $events = Events::latest()
+        ->where('title', 'LIKE', "%$request->adminlteSearch%" )
+        ->get();
 
         return view('admin.events.index', compact('events'));
     }

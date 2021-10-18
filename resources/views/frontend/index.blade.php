@@ -31,7 +31,7 @@
     <livewire:random-meals>
 
 <div class="fondo-fijo inicio"> </div>
-
+{{-- 
 <section class="comentarios contenedor">
     <h1>Amado por muchos</h1>
     <div class="lista-comentarios">
@@ -63,6 +63,6 @@
             <h3>Dick Morris</h3>
         </div>
     </div>
-
-</section>
+--}}
+</section> 
 @endsection
