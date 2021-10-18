@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\{HomeController,CategoryController,MealController,EventsController};
+use App\Http\Controllers\{HomeController,CategoryController,MealController,EventsController,MailController};
 use App\Http\Controllers\Frontend\PagesController;
 
 /*
@@ -40,3 +40,4 @@ Route::resource('meal', MealController::class)->except('show')->middleware('auth
 Route::resource('events', EventsController::class)->except('show')->middleware('auth');
 
 
+Route::get('/send-email', [MailController::class,'sendEmail']);
