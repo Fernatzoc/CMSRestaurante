@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\Admin\HomeController;
-
+use App\Http\Controllers\UserController;
 
 Route::get('', [HomeController::class, 'index']);
 
@@ -21,3 +21,12 @@ Route::put('/menu', [EmpresaController::class, 'menu_update'])->name('empresa.me
 
 Route::get('/contacto', [EmpresaController::class, 'contacto' ])-> name('empresa.contacto');
 Route::put('/contacto', [EmpresaController::class, 'contacto_update'])->name('empresa.contacto_update');
+
+//Users
+
+Route::get('/users', [UserController::class, 'index'])-> name('users.index');
+Route::post('/users', [UserController::class, 'store'])-> name('users.store');
+Route::get('/users/create', [UserController::class, 'create'])-> name('users.create');
+Route::get('/users/{user}/edit', [UserController::class, 'edit'])-> name('users.edit');
+Route::put('/users/{user}', [UserController::class, 'update'])-> name('users.update');
+
