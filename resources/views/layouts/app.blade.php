@@ -22,6 +22,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -57,7 +58,7 @@
 <div class="nav">
     <div class="nav__content">
         <ul class="nav__list">
-            <li class="nav__list-item active-nav"><a href="/" class="hover-target">INICIO</a></li>
+            <li class="nav__list-item"><a href="/" class="hover-target">INICIO</a></li>
             <li class="nav__list-item"><a href="/conocenos" class="hover-target">CONOCENOS</a></li>
             <li class="nav__list-item"><a href="/menu" class="hover-target">MENU</a></li>
             <li class="nav__list-item"><a href="/contacto" class="hover-target">CONTACTANOS</a></li>
@@ -187,6 +188,7 @@
 
 </footer>
 
+<script src="{{ asset('js/header_movil.js') }}"></script>
 @livewireScripts
 
 </body>
