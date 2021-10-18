@@ -27,6 +27,20 @@ class Empresa extends Model
         'imgConocenos',
         'imgMenu',
         'imgContacto',
+        'openMonday',
+        'closeMonday',
+        'openTuesday',
+        'closeTuesday',
+        'openWednesday',
+        'closeWednesday',
+        'openThursdays',
+        'closeThursdays',
+        'openFriday',
+        'closeFriday',
+        'openSaturday',
+        'closeSaturday',
+        'openSunday',
+        'closeSunday',
     ];
 
 }

@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use View;
 use App\Models\Empresa;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
 class EmpresaProvider extends ServiceProvider
@@ -29,6 +30,12 @@ class EmpresaProvider extends ServiceProvider
         {
             $empresa = Empresa::take(1)->first();
             $view->with('empresa', $empresa);
+        });
+
+        View::composer(['layouts.app'], function($view)
+        {
+            $horarios = DB::table('horarios')->get();
+            $view->with('horarios', $horarios);
         });
     }
 }
