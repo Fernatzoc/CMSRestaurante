@@ -28,30 +28,7 @@
     
 </section>
 
-<section class="platillos">   
-    <h1>Nuestras Delicias Destacadas</h1>
-    <div class="listado-platillos contenedor" >
-        <div class="platillo">
-            <img class= "imagen"src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-2.jpg">
-            <h2>Carne de res asada al horno con vegetales  </h2>
-        </div>
-        
-        <div class="platillo">
-            <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-1.jpg">
-            <h2>Filete carbonizado con salsa BBQ</h2>
-        </div>
-        
-        <div class="platillo">
-            <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-4.jpg">
-            <h2>Costillas BBQ con verduras y papas fritas</h2>
-        </div>
-        <div class="platillo">
-            <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/food-3.jpg">
-            <h2>Cordero Asado con patatas sazonadas</h2>
-        </div>
-    </div>
-    <button class="btn-reservation" >Ver Menú Completo</button>
-</section>
+    <livewire:random-meals>
 
 <div class="fondo-fijo inicio"> </div>
 

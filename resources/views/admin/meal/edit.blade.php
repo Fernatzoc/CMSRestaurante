@@ -54,7 +54,7 @@
                                 @if($meal->category)
                                 <option value="{{ $meal->category->id }}"> {{ $meal->category->name }} </option>
                                 @else
-                                <option value="null"></option>
+                                <option value=""></option>
                                 @endif
                                 @foreach($categories as $category)
                                 
