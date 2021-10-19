@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\UserController;
 
-Route::get('', [HomeController::class, 'index']);
+Route::get('', [AdminController::class, 'index']);
 
 Route::get('/general', [EmpresaController::class, 'index' ])-> name('empresa.index');
 Route::put('/general', [EmpresaController::class, 'update'])->name('empresa.update');
