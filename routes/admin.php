@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\UserController;
 
-Route::get('', [HomeController::class, 'index']);
+Route::get('', [AdminController::class, 'index']);
 
 Route::get('/general', [EmpresaController::class, 'index' ])-> name('empresa.index');
 Route::put('/general', [EmpresaController::class, 'update'])->name('empresa.update');
@@ -29,4 +30,5 @@ Route::post('/users', [UserController::class, 'store'])-> name('users.store');
 Route::get('/users/create', [UserController::class, 'create'])-> name('users.create');
 Route::get('/users/{user}/edit', [UserController::class, 'edit'])-> name('users.edit');
 Route::put('/users/{user}', [UserController::class, 'update'])-> name('users.update');
+Route::delete('/users/{user}', [UserController::class, 'destroy'])-> name('users.destroy');
 

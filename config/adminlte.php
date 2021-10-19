@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -267,6 +267,11 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ], */
+        [
+            'text' => 'Escritorio',
+            'url'  => 'admin',
+            'icon' => 'far fa-fw fas fa-home',
+        ],
         [
             'text' => 'Usuarios',
             'url'  => 'admin/users',

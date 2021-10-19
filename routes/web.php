@@ -15,19 +15,12 @@ use App\Http\Controllers\Frontend\PagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['verify' => true, 'register' => false]);
 
 Route::get('/', [PagesController::class, 'index'])->name('pages.index');
 Route::get('/conocenos', [PagesController::class, 'conocenos'])->name('pages.conocenos');
 Route::get('/menu', [PagesController::class, 'menu'])->name('pages.menu');
 Route::get('/contacto', [PagesController::class, 'contacto'])->name('pages.contacto');
-
- Route::get('/admin', function () {
-    return view('admin.index');
-}); 
-
-Auth::routes();
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('storage-link', function (){
     Artisan::call('storage:link');
