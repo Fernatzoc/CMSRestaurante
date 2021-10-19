@@ -40,4 +40,4 @@ Route::resource('meal', MealController::class)->except('show')->middleware('auth
 Route::resource('events', EventsController::class)->except('show')->middleware('auth');
 
 
-Route::get('/send-email', [MailController::class,'sendEmail']);
+Route::get('/send-email', [MailController::class,'sendEmail'])->name('send-email');

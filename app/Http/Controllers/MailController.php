@@ -8,16 +8,20 @@ use App\Mail\TestMail;
 
 class MailController extends Controller
 {
-    public function sendEmail(){
+    public function sendEmail(Request $request){
         $details = [
-            'title' => 'Mail from me',
-            'body' => 'correo de prueba'
+            'title' => 'Informacion Nuevo Cliente',
+            'name' => $request->name,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'number' => $request->number,
+            'msj' => $request->msj,
         ];
 
-        Mail::to("rjuarezm2@miumg.edu.gt")->send(new TestMail($details));
+        Mail::to("jtzununa1@miumg.edu.gt")->send(new TestMail($details));
 
 
-        return 'email sent';
+        return back()->with('status','Mensaje Enviado Correctamente');
 
     }
 
