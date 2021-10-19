@@ -2,17 +2,18 @@
 
 @section('content')
 
-    <h2 class="text-center mb-5">Pagina Pricipal</h2>
-
      <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card mt-2">
                                 <div class="card-header">
                                     <h4 class="card-title">Usuarios</h4>
+                                    <div class="text-right">
+                                        <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm">Nuevo Usuario</a>
+                                    </div>
                                 </div>
 
                                 <div class="card-body">
@@ -21,19 +22,14 @@
                                             {{ session('success') }}
                                         </div>                                        
                                     @endif
-                                    <div class="row">
-                                        <div class="col-12 text-right">
-                                            <a href="{{ route('users.create') }}" class="btn btn-primary btn-sm">Agregar Usuario</a>
-                                        </div>
-                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead class="text-primary">
-                                                <th>ID</th>
-                                                <th>Nombre</th>
-                                                <th>Correo</th>
-                                                <th>Creado</th>
-                                                <th class="text-right">Acciones</th>
+                                                <th class="text-dark">ID</th>
+                                                <th class="text-dark">NOMBRE</th>
+                                                <th class="text-dark">CORREO</th>
+                                                <th class="text-dark">CREADO</th>
+                                                <th class="text-right text-dark">ACCIONES</th>
                                             </thead>
                                             <tbody>
                                                 @foreach($users as $user)
@@ -44,9 +40,13 @@
                                                     <td>{{$user->created_at}}</td>
                                                     <td class="text-right">
                                                         <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="far fa-edit"></i></a>
-                                                        <button class="btn btn-danger" type="button">
-                                                            <i class="fas fas fa-trash-alt"></i>
-                                                        </button>
+                                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display: inline-block">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-danger" type="submit">
+                                                                <i class="fas fas fa-trash-alt"></i>
+                                                            </button>
+                                                        </form>
                                                     </td>
                                                 </tr>
                                                 @endforeach

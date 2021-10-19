@@ -22,6 +22,13 @@ class UserController extends Controller
 
     public function store(Request $request)
     {   
+
+        $request->validate([
+            'name' => 'required|min:3',
+            'email' => 'required|email|unique:users',
+            'password' => 'required'
+        ]);
+
         User::create($request->only('name', 'email')
             + [
                 'password' => bcrypt($request->input('password'))
@@ -36,6 +43,16 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
+
+
+        $request->validate([
+            'name' => 'required|min:3',
+            'email' => [
+                'required', 'unique:users,email,' . request()->route('user')->id
+            ],
+            'password' => 'sometimes'
+        ]);
+
         $data = $request->only('name', 'email');
         $password = $request->input('password');
         if($password)
@@ -43,6 +60,12 @@ class UserController extends Controller
 
         $user->update($data);
         return redirect()->route('users.index')->with('success', 'Usuario actualizado correctamente.');
+    }
+
+    public function destroy(User $user)
+    {   
+        $user->delete();
+        return back()->with('success', 'Usuario eliminado correctamente');
     }
 
 
