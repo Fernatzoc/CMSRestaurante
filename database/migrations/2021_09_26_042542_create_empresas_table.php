@@ -22,6 +22,7 @@ class CreateEmpresasTable extends Migration
             $table->char('facebook', 100);
             $table->char('instagram', 100);
             $table->text('conocenos');
+            $table->text('mapa');
             $table->text('sobreNosotros');
             $table->string('tituloHome');
             $table->string('tituloConocenos');

@@ -114,9 +114,6 @@
 <footer class="footer contenedor">
 
 
-    {{$empresa}}
-    {{$horarios}}
-
     <div class="footer-part-1">
 
         <div class="reservation">

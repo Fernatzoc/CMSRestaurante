@@ -18,6 +18,7 @@ class Empresa extends Model
         'facebook',
         'instagram',
         'conocenos',
+        'mapa',
         'sobreNosotros',
         'tituloHome',
         'tituloConocenos',

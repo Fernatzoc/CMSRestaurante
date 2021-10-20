@@ -12,10 +12,38 @@
 
 namespace App\Models{
 /**
+ * App\Models\Category
+ *
+ * @property int $id
+ * @property string $name
+ * @property string|null $image
+ * @property string $section
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $get_image
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Meal[] $meals
+ * @property-read int|null $meals_count
+ * @method static \Database\Factories\CategoryFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereSection($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
+ */
+	class Category extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Empresa
  *
  * @property int $id
  * @property string $nombreEmpresa
+ * @property string $logo
  * @property string $direccion
  * @property string $telefono
  * @property string $facebook
@@ -45,6 +73,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgContacto($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgMenu($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereInstagram($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereLogo($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereNombreEmpresa($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereSobreNosotros($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTelefono($value)
@@ -55,6 +84,67 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereUpdatedAt($value)
  */
 	class Empresa extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Events
+ *
+ * @property int $id
+ * @property string $title
+ * @property string $date
+ * @property string $description
+ * @property string|null $image
+ * @property string $active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read mixed $get_image
+ * @method static \Database\Factories\EventsFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Events newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Events query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Events whereUpdatedAt($value)
+ */
+	class Events extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Meal
+ *
+ * @property int $id
+ * @property int|null $category_id
+ * @property string $name
+ * @property string $price
+ * @property string|null $image
+ * @property string $description
+ * @property string $active
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Category|null $category
+ * @property-read mixed $get_image
+ * @method static \Database\Factories\MealFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereActive($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Meal whereUpdatedAt($value)
+ */
+	class Meal extends \Eloquent {}
 }
 
 namespace App\Models{
