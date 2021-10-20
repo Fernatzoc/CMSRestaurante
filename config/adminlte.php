@@ -316,10 +316,12 @@ return [
                 [
                     'text' => 'Categorias',
                     'url'  => 'category',
+                    'icon' => 'fas fa-fw fa-arrow-right',
                 ],
                 [
                     'text' => 'Platillos',
                     'url'  => 'meal',
+                    'icon' => 'fas fa-fw fa-arrow-right',
                 ],
             ],
         ],

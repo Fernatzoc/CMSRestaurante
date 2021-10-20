@@ -2,11 +2,16 @@
 
 @section('content')
 
-<div class="pt-4">
-    <div>
-        <div>
+
+<div class="container pt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Crear Platillo</div>
+                <div class="card-header">
+                    CREAR PLATILLO
+                    <a href="{{ route('meal.index') }}" class="btn btn-danger btn-sm mb-4 float-right">Cancelar</a>
+                </div>
+
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,26 +19,49 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                
                     <form action="{{ route('meal.store') }}" method="POST" enctype="multipart/form-data">
-                        <div>
+                        <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" name="name" required> 
+                            <input 
+                                type="text" 
+                                name="name"
+                                class="form-control @error('name') is-invalid @enderror" 
+                                value="{{ old('name') }}"
+                                autofocus
+                            > 
                         </div>
-                        <div>
+                        <div class="form-group">
                             <label for="image">Imagen</label>
-                            <input type="file" name="image" required>
+                            <input 
+                                type="file" 
+                                name="image"
+                                class="form-control" 
+                            >
                         </div>
-                        <div>
+                        <div class="form-group">
                             <label for="description">Descripción</label>
-                            <textarea name="description" id="" cols="60" rows="10" required></textarea>
+                            <textarea 
+                                name="description" 
+                                id="" 
+                                rows="2" 
+                                class="form-control @error('description') is-invalid @enderror" 
+                            >
+                                {{ old('description') }}
+                            </textarea>
                         </div>
-                        <div>
-                            <label for="price">Precio</label>
-                            <input type="text" name="price" placeholder="100" required>
-                            <span>.Q</span>
+                        <div class="form-group">
+                            <label for="price">Precio</label><span> Q.</span>
+                            <input 
+                                type="number" 
+                                name="price" 
+                                placeholder="100" 
+                                class="form-control @error('price') is-invalid @enderror" 
+                                value="{{ old('price') }}"
+                            >
+                            
                         </div>
-                        <div>
+                        <div class="form-group">
                             <label for="category">Categoria Platillo</label>
                             <select name="category_id" required>
                                 <option value="">Seleccionar Categoria</option>
@@ -42,17 +70,20 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div>
+                        <div class="form-group">
                             @csrf
                             <input type="submit" value="Crear" class="btn btn-sm btn-primary">
                         </div>
                     </form>
                         
-
+                
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 
+
 @endsection
+
