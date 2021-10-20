@@ -25,7 +25,8 @@
                     <h2>{{ $category->name }}</h2>
                     @foreach($category->meals as $meal)
                         @if($meal->active == 'on')
-                            <x-meal-component :meal="$meal"/>
+                            {{-- <x-meal-component :meal="$meal"/> --}}
+                            @include('components.meal-component', $meal)
                         @endif
                     @endforeach
                 </div>

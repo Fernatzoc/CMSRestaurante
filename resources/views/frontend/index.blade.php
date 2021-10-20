@@ -24,11 +24,14 @@
         </div>
     </div>
 
-    <livewire:events-section>
+    {{-- <livewire:events-section> --}}
+    @livewire('events-section')
+
     
 </section>
 
-    <livewire:random-meals>
+    {{-- <livewire:random-meals> --}}
+    @livewire('random-meals')
 
 <div class="fondo-fijo inicio"> </div>
 {{-- 

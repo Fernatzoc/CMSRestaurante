@@ -13,7 +13,8 @@
 @section('content')
 <section class="contenedor">
 
-    <livewire:menu-section>
+    {{-- <livewire:menu-section> --}}
+    @livewire('menu-section')
 
 </section>
 @endsection

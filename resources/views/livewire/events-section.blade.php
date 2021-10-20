@@ -3,7 +3,7 @@
 @endphp
 
 
-<div style="color: white; margin-top: 30px;">
+<div style="color: rgba(255, 255, 255, 0.616); margin-top: 50px;">
 
     @foreach ($events as $event) {{-- Revisa que almenos uno este activo --}}
     @if($event->active == 'on')
@@ -17,18 +17,21 @@
 
    @foreach($events as $event)
     @if($event->active == 'on')
-        <h1>
-            {{ $event->title }}
-        </h1>
-        <div class="imagen-acercade"> <img src="{{ $event->get_image }}" alt="" width="100%" height="auto"></div>
-        <div class="mt-5">
-            <h2>
-                {{ $event->description }}
-            </h2>
+        <div class="texto-historia" style="margin-top: 60px;">
+            <div class="historia-restaurante mb-4">
+                <h2>{{ $event->title }}</h2>
+            </div>
         </div>
-        <h1>
-            {{ $event->date }}
-        </h1>
+        <div class="texto-historia">
+            <div class="imagen-acercade"> <img src="{{ $event->get_image }}" alt=""></div>
+            <div class="historia-restaurante h3 mt-4">
+                {{ $event->description }}
+                <h2>
+                    {{ $event->date }}
+                </h2>
+            </div>
+        </div>
+
     @endif
    @endforeach
 </div>
