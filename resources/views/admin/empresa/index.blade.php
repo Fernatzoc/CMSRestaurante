@@ -308,6 +308,28 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="mapa" >Mapa:</label>
+                    <input 
+                        class="form-control @error('mapa') is-invalid @enderror" 
+                        type="text"
+                        name="mapa"
+                        id="mapa"
+                        value="{{ $empresa->mapa }}"
+                    >
+
+                    <div class="mapa mt-2 mb-2">
+                        <iframe src="{{$empresa->mapa}}" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                    @error('mapa')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+
+                </div>
+
+                <div class="form-group">
                     <label for="facebook" >Facebook:</label>
                     <input 
                         class="form-control @error('facebook') is-invalid @enderror" 

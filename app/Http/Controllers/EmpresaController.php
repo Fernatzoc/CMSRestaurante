@@ -45,6 +45,7 @@ class EmpresaController extends Controller
             'closeSaturday'    => 'required',
             'openSunday'       => 'required',
             'closeSunday'      => 'required',
+            'mapa'             => 'required',
         ]);
 
         
@@ -80,6 +81,7 @@ class EmpresaController extends Controller
         $empresa->telefono = $data['telefono'];
         $empresa->facebook = $data['facebook'];
         $empresa->instagram = $data['instagram'];
+        $empresa->mapa = $data['mapa'];
         $empresa->save();
         
 
