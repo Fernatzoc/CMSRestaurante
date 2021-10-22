@@ -18,6 +18,7 @@ class EmpresaSeeder extends Seeder
         DB::table('empresas')->insert([
             'nombreEmpresa' => 'Lyla Cafe',
             'logo' => 'img',
+            'icono' => 'img',
             'imgFooter' => 'img',
             'direccion' => 'San Marcos',
             'telefono' => '58745896',

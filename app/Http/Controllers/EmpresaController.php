@@ -31,6 +31,7 @@ class EmpresaController extends Controller
             'facebook'         => 'required',
             'instagram'        => 'required',
             'logo'             => 'image',
+            'icono'            => 'image',
             'imgFooter'        => 'image',
             'openMonday'       => 'required',
             'closeMonday'      => 'required',
@@ -82,6 +83,13 @@ class EmpresaController extends Controller
             $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
             $img->save();
             $empresa->imgFooter = $ruta_imagen;
+        }
+
+        if( request('icono')) {
+            $ruta_imagen = $request['icono']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(512,512);
+            $img->save();
+            $empresa->icono = $ruta_imagen;
         }
         
         $empresa->nombreEmpresa = $data['nombreEmpresa'];

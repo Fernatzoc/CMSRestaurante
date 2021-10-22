@@ -30,7 +30,7 @@
     
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+    <link rel="icon" href="/storage/{{$empresa->logo}}">    
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     @livewireStyles

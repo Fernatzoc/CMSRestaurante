@@ -69,6 +69,29 @@
                     </div>
                 </div>
 
+
+                <div class="form-group">
+                    <label for="icono">icono</label>
+                    <input 
+                        class="form-control @error('icono') is-invalid @enderror"
+                        type="file"
+                        id="icono"
+                        name="icono"
+                    >
+
+                    @error('icono')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+            
+                    <div>
+                        <p>Imagen Actual</p>
+                        <img src="/storage/{{$empresa->icono}}" style="width: 300px">
+                    </div>
+                </div>
+
+
                 <div class="form-group">
                     <label for="direccion" >Direccion:</label>
                     <input
