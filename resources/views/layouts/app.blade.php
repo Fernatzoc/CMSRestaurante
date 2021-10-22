@@ -122,10 +122,10 @@
             <h2>O Llamanos {{ $empresa->telefono }}</h2>
             <div class="menu-footer">
                 <ul class="list-menu-footer" >
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./about.html">Conocenos</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/conocenos">Conocenos</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/contacto">Contacto</a></li>
                 </ul>
             </div>
         </div>

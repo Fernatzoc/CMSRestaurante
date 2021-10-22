@@ -14,7 +14,6 @@
 
 <section class="bienvenida contenedor">
 
-    {{$empresa}}
     <h1>Bienvenidos A Andrea's Cafe y Restaurante</h1>
     <div class="texto-historia">
         <div class="imagen-acercade"> <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/about.jpg " alt=""></div>

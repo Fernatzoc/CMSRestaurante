@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header">
                     EDITAR CATEGORIA
-                    <a href="{{ route('category.index') }}" class="btn btn-danger btn-sm mb-4 float-right">Cancelar</a>
+                    <a href="{{ route('events.index') }}" class="btn btn-danger btn-sm mb-4 float-right">Cancelar</a>
                 </div>
 
                 
@@ -77,7 +77,11 @@
                         <div class="form-group">
                             @csrf
                             @method('put')
-                            <input type="submit" value="Actualizar" class="btn btn-sm btn-primary">
+                            <input 
+                                type="submit" 
+                                value="Actualizar" 
+                                class="btn btn-sm btn-primary form-control mt-4"
+                            >
                         </div>
                     </form>
 
