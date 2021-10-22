@@ -10051,6 +10051,26 @@ img {
   max-width: 100%;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+.ir-arriba {
+  display: none;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  color: #f89e4a;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+.ir-arriba:hover {
+  color: #ec7709;
+}
+
 /* BIENVENIDA */
 .bienvenida {
   padding: 75px 0;
@@ -10361,7 +10381,6 @@ header > div {
   display: flex;
   padding: 5% 10% 5% 5%;
   align-items: center;
-  justify-content: space-between;
 }
 
 .menu-icon {
@@ -10417,7 +10436,7 @@ header > div {
 }
 
 .nav:after {
-  background-color: #1d1922;
+  background: var(--fondo1);
   transition-delay: 0s;
 }
 
@@ -10708,9 +10727,9 @@ body.nav-active .nav__list-item:nth-child(10) {
     background-size: 180%;
   }
 
-  /* .titulo_baner {
+  .titulo_baner {
     font-size: 20px;
-  } */
+  }
 }
 /*FIN  HEADER RESPONSIVE */
 /* FIN HEADER */
@@ -10759,6 +10778,11 @@ body.nav-active .nav__list-item:nth-child(10) {
 .btn-reservation:hover {
   background-color: #f89e4a;
   color: #fff;
+}
+
+.btn-size-r {
+  width: 225px;
+  text-align: center;
 }
 
 .list-menu-footer {
@@ -11021,9 +11045,22 @@ body.nav-active .nav__list-item:nth-child(10) {
     margin-top: 75px;
   }
 
-  .name {
+  .mapa {
+    margin-left: 50px;
+  }
+
+  .name-group {
     display: flex;
-    gap: 8px;
+    gap: 10px;
+  }
+
+  .name,
+.lastname {
+    width: 50%;
+  }
+
+  .error-f {
+    font-size: 16px !important;
   }
 
   .form-contacto {
@@ -11071,4 +11108,9 @@ body.nav-active .nav__list-item:nth-child(10) {
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.btn-contacto:hover {
+  background-color: #f89e4a;
+  color: #fff;
 }

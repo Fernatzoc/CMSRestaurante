@@ -33,11 +33,11 @@
         <div class="mt-4">
             <h2>{{  $details['title'] }}</h2>
 
-            <span>Nombre: </span><h3>{{  $details['name'] }}</h3>
-            <span>Apellido: </span><h3>{{  $details['lastname'] }}</h3>
-            <span>Correo Electronico: </span><h3>{{  $details['email'] }}</h3>
-            <span>Numero Telefonico: </span><h3>{{  $details['number'] }}</h3>
-            <span>Mensaje:</span><h3 style="text-align: justify">{{  $details['msj'] }}</h3>
+            <span>Nombre: </span><h3>{{  $details['nombre'] }}</h3>
+            <span>Apellido: </span><h3>{{  $details['apellido'] }}</h3>
+            <span>Correo Electronico: </span><h3>{{  $details['correo'] }}</h3>
+            <span>Numero Telefonico: </span><h3>{{  $details['telefono'] }}</h3>
+            <span>Mensaje:</span><h3 style="text-align: justify">{{  $details['mensaje'] }}</h3>
         </div>
 
     </div>

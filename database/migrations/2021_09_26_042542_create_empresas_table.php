@@ -17,6 +17,7 @@ class CreateEmpresasTable extends Migration
             $table->id();
             $table->text('nombreEmpresa', 25);
             $table->string('logo');
+            $table->string('imgFooter');
             $table->char('direccion', 50);
             $table->char('telefono', 8);
             $table->char('facebook', 100);

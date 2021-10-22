@@ -44,12 +44,26 @@
       align-items: center;
       margin-top: 75px;
     }
-    
-    
-    .name {
-      display: flex;
-      gap: 8px
+
+    .mapa {
+      margin-left: 50px;
     }
+    
+    
+    .name-group {
+      display: flex;
+      gap: 10px
+    }
+
+    .name,
+    .lastname {
+      width: 50%;
+    }
+
+    .error-f {
+      font-size: 16px !important;
+    }
+    
     
     .form-contacto {
       margin: 50px;
@@ -101,4 +115,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
+    }
+
+    .btn-contacto:hover {
+      background-color: $primary;
+      color: #fff;
     }

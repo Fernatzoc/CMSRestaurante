@@ -330,6 +330,28 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="imgFooter">imgFooter</label>
+                    <input 
+                        class="form-control @error('imgFooter') is-invalid @enderror"
+                        type="file"
+                        id="imgFooter"
+                        name="imgFooter"
+                    >
+
+                    @error('imgFooter')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong>{{$message}}</strong>
+                    </span>
+                    @enderror
+            
+                    <div>
+                        <p>Imagen Actual</p>
+                        <img src="/storage/{{$empresa->imgFooter}}" style="width: 300px">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
                     <label for="facebook" >Facebook:</label>
                     <input 
                         class="form-control @error('facebook') is-invalid @enderror" 

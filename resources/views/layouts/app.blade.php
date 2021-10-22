@@ -43,7 +43,7 @@
 <div class="cd-header">
     <div class="icono_menu_movil">
         <div class="">
-            <a href="#"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="50%" height="auto"></a>
+            <a href="/"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="50%" height="auto"></a>
         </div>
         <div class="">
             <div class="menu-icon hover-target">
@@ -80,7 +80,7 @@
         <div class="logo_navegacion">
 
             <div class="logo">
-                <a href="#"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="100%" height="auto"></a>
+                <a href="/"><img src="/storage/{{$empresa->logo}}" alt="logo Andrea's Cafe y Restaurante" width="100%" height="auto"></a>
             </div>
 
 
@@ -118,8 +118,8 @@
 
         <div class="reservation">
             <h2>¡Estamos esperando para servirle!!</h2>
-            <button class="btn-reservation" >Reservar una mesa</button>
-            <h2>O Llamanos {{ $empresa->telefono }}</h2>
+            <a class="btn-reservation btn-size-r" href="/contacto">Reservar una mesa</a>
+            <h2 class="mb-5">O Llamanos {{ $empresa->telefono }}</h2>
             <div class="menu-footer">
                 <ul class="list-menu-footer" >
                     <li><a href="/">Inicio</a></li>
@@ -137,20 +137,20 @@
     <div class="footer-part-2">
         <div class="widget-1">
             <div class="location">
-                <h3>Direccion</h3>
+                <h3>Dirección</h3>
                 <p>{{ $empresa->direccion }}</p>
             </div>
             <div class="follow">
-                <h3>Siguenos</h3>
+                <h3>Síguenos</h3>
                 <ul class="icons" >
-                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="{{ $empresa->facebook }}" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="{{ $empresa->instagram }}" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="widget-2">
-            <img src="./assets/imgs/food-1.jpg" alt="Mesas">
+            <img src="/storage/{{$empresa->imgFooter}}">
         </div>
 
         @php
@@ -167,7 +167,7 @@
 
 
         <div class="widget-3">
-            <h3>Horarios</h3>
+            <h3 class="mb-4">Horarios</h3>
             <p>Lunes:  {{$open[0]}}  -  {{$close[0]}}</p>
             <p>Martes: {{$open[1]}}  -  {{$close[1]}}</p>
             <p>Miercoles: {{$open[2]}}  -  {{$close[2]}}</p>
@@ -180,8 +180,15 @@
     </div>
 
     <div class="credits">
-        <p>&copy; Copyright 2021 | Chatos</p>
+        <p>&copy; Copyright {{now()->year}} | Chatos</p>
     </div>
+
+    <a class="ir-arriba"  javascript:void(0) title="Volver arriba">
+        <span class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
 
 </footer>
 

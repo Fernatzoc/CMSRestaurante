@@ -11,6 +11,6 @@
         @endforeach
     </div>
     
-    <button class="btn-reservation" >Ver Menú Completo</button>
+    <a href="/menu" class="btn-reservation btn-size-r">Ver Menú Completo</a>
 
 </section>

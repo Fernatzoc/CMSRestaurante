@@ -49,6 +49,7 @@ namespace App\Models{
  * @property string $facebook
  * @property string $instagram
  * @property string $conocenos
+ * @property string $mapa
  * @property string $sobreNosotros
  * @property string $tituloHome
  * @property string $tituloConocenos
@@ -74,6 +75,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereImgMenu($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereInstagram($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereMapa($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereNombreEmpresa($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereSobreNosotros($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Empresa whereTelefono($value)
