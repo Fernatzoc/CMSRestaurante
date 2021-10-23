@@ -19,7 +19,7 @@
         <div class="imagen-acercade"> <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/about.jpg " alt=""></div>
         <div class="historia-restaurante">
             {!! $empresa->sobreNosotros !!}
-            <a class="btn-reservation btn-size-r" ref="/contacto">Reservar Una Mesa</a>
+            <a class="btn-reservation btn-size-r" href="/contacto">Reservar Una Mesa</a>
         </div>
     </div>
 

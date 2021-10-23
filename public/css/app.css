@@ -10340,7 +10340,8 @@ header > div {
   z-index: 99999;
 }
 
-.cursor2, .cursor3 {
+.cursor2,
+.cursor3 {
   height: 36px;
   width: 36px;
   z-index: 99998;
@@ -10364,7 +10365,9 @@ header > div {
 }
 
 @media screen and (max-width: 1200px) {
-  .cursor, .cursor2, .cursor3 {
+  .cursor,
+.cursor2,
+.cursor3 {
     display: none;
   }
 }
@@ -10423,7 +10426,8 @@ header > div {
   z-index: 98;
 }
 
-.nav:before, .nav:after {
+.nav:before,
+.nav:after {
   content: "";
   position: fixed;
   width: 100vw;
@@ -10436,7 +10440,7 @@ header > div {
 }
 
 .nav:after {
-  background: var(--fondo1);
+  background: #1d1922;
   transition-delay: 0s;
 }
 
@@ -10535,7 +10539,8 @@ body.nav-active .nav {
   visibility: visible;
 }
 
-body.nav-active .nav:before, body.nav-active .nav:after {
+body.nav-active .nav:before,
+body.nav-active .nav:after {
   transform: translateX(0%) translateY(0%);
   border-radius: 0;
 }
@@ -11036,6 +11041,10 @@ body.nav-active .nav__list-item:nth-child(10) {
   height: 350px;
 }
 
+.error-f {
+  font-size: 16px;
+}
+
 @media (min-width: 768px) {
   .direction {
     background-color: #2c2830;
@@ -11057,10 +11066,6 @@ body.nav-active .nav__list-item:nth-child(10) {
   .name,
 .lastname {
     width: 50%;
-  }
-
-  .error-f {
-    font-size: 16px !important;
   }
 
   .form-contacto {
