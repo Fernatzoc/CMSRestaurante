@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@charset "UTF-8";
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10396,10 +10396,10 @@ header > div {
 }
 
 .menu-icon__line {
-  height: 2px;
+  height: 3px;
   width: 30px;
   display: block;
-  background-color: #fff;
+  background-color: white !important;
   margin-bottom: 7px;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.5s ease;
@@ -11119,3 +11119,104 @@ body.nav-active .nav__list-item:nth-child(10) {
   background-color: #f89e4a;
   color: #fff;
 }
+
+
+
+/* DROP UP MENU FOR CATEGORIES */
+
+
+.menu_categories{
+    position: fixed;
+    bottom: 0px;
+    right: -764px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 9;
+    font-size: 18px;
+    padding: 5px;
+    color: #f89e4a;
+    font-weight: 800;
+}
+
+.anim_menu_categories{
+    animation: anim_menu_categories 0.7s forwards ease-out;
+}
+
+.anim_menu_categories_close{
+    animation: anim_menu_categories_close 1s forwards ease-in-out;
+}
+
+
+.menu_categories a{
+    color: #f89e4a !important;
+    font-weight: 800 !important;
+}
+
+.item_menu_categories{
+    margin-left: 10px;
+}
+
+
+.dropup-menu{
+    position: fixed;
+    bottom: 65px;
+    right: 20px;
+    background-color: #f89e4a;
+    padding: 12px;
+    border-radius: 50px;
+    z-index: 10;
+    box-shadow: 0px 0px 0px 0px #f89e4a;
+    animation: dropup-menu-box-shadow-anim 1s 5 ease-in-out;
+    animation-delay: 3s;
+}
+
+
+.dropup-menu i{
+    color: white;
+    font-size: 33px;
+}
+
+@media only screen and (min-width: 765px) {
+    .dropup-menu, .menu_categories{
+        display: none;
+    }
+}
+
+
+/* animations */
+
+@keyframes dropup-menu-box-shadow-anim {
+    0%{
+        box-shadow: 0px 0px 0px 0px #f89e4a;
+    }
+    100%{
+        box-shadow: 0px 0px 0px 15px #f89e4a00;
+    }
+}
+
+@keyframes anim_menu_categories {
+    0%{
+        right: -764px;
+    }
+    100%{
+        right: -30px;
+    }
+}
+
+@keyframes anim_menu_categories_close {
+    0%{
+        right: -30px;
+    }
+    100%{
+        right: -764px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* END DROP UP MENU FOR CATEGORIES */
+
+
