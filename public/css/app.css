@@ -11102,11 +11102,13 @@ body.nav-active .nav__list-item:nth-child(10) {
     width: 100%;
     background-color: white;
     border-radius: 15px;
-    z-index: 9;
+    z-index: 109;
     font-size: 18px;
     padding: 5px;
     color: #f89e4a;
     font-weight: 800;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .anim_menu_categories{
@@ -11135,7 +11137,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     background-color: #f89e4a;
     padding: 12px;
     border-radius: 50px;
-    z-index: 10;
+    z-index: 110;
     box-shadow: 0px 0px 0px 0px #f89e4a;
     animation: dropup-menu-box-shadow-anim 1s 5 ease-in-out;
     animation-delay: 1s;
@@ -11178,13 +11180,13 @@ body.nav-active .nav__list-item:nth-child(10) {
         right: -764px;
     }
     100%{
-        right: -30px;
+        right: -50px;
     }
 }
 
 @keyframes anim_menu_categories_close {
     0%{
-        right: -30px;
+        right: -50px;
     }
     100%{
         right: -764px;
