@@ -11140,11 +11140,11 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .anim_menu_categories{
-    animation: anim_menu_categories 0.7s forwards ease-out;
+    animation: anim_menu_categories 0.5s forwards ease-out;
 }
 
 .anim_menu_categories_close{
-    animation: anim_menu_categories_close 1s forwards ease-in-out;
+    animation: anim_menu_categories_close 0.5s forwards ease-out;
 }
 
 
@@ -11168,7 +11168,15 @@ body.nav-active .nav__list-item:nth-child(10) {
     z-index: 10;
     box-shadow: 0px 0px 0px 0px #f89e4a;
     animation: dropup-menu-box-shadow-anim 1s 5 ease-in-out;
-    animation-delay: 3s;
+    animation-delay: 1s;
+}
+
+.dropup-menu-animation-forwards{
+    animation: anim_button_menu_categories_backwards 0.5s ease;
+}
+
+.dropup-menu-animation-backwards{
+    animation: anim_button_menu_categories_forwards 0.5s ease;
 }
 
 
@@ -11210,6 +11218,24 @@ body.nav-active .nav__list-item:nth-child(10) {
     }
     100%{
         right: -764px;
+    }
+}
+
+@keyframes anim_button_menu_categories_forwards {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anim_button_menu_categories_backwards {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }
 

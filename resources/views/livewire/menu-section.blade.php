@@ -25,7 +25,7 @@
 
         </div>
     @endif
-@endforeach
+@endforeach     
 
 
 <div class="menu_categories" id="menu_categories">
