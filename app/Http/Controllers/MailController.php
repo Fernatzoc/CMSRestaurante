@@ -27,7 +27,7 @@ class MailController extends Controller
             'mensaje' => $data['mensaje'],
         ];
 
-        Mail::to("jtzununa1@miumg.edu.gt")->send(new TestMail($data));
+        Mail::to("fernandotzoc0@gmail.com")->send(new TestMail($data));
 
 
         return back()->with('status','Mensaje Enviado Correctamente');

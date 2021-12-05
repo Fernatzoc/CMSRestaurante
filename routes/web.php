@@ -34,3 +34,7 @@ Route::resource('events', EventsController::class)->except('show')->middleware('
 
 
 Route::get('/send-email', [MailController::class,'sendEmail'])->name('send-email');
+
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}

@@ -50,7 +50,7 @@ class EmpresaController extends Controller
             'mapa'             => 'required',
         ]);
 
-        
+
         DB::table('horarios')->where('id', 1)->update(['open_time' => $data['openMonday']]);
         DB::table('horarios')->where('id', 1)->update(['close_time' => $data['closeMonday']]);
         DB::table('horarios')->where('id', 2)->update(['open_time' => $data['openTuesday']]);
@@ -66,14 +66,14 @@ class EmpresaController extends Controller
         DB::table('horarios')->where('id', 7)->update(['open_time' => $data['openSunday']]);
         DB::table('horarios')->where('id', 7)->update(['close_time' => $data['closeSunday']]);
 
-    
+
 
         $empresa = Empresa::find(1);
-        
+
 
         if( request('logo')) {
             $ruta_imagen = $request['logo']->store('upload-images', 'public');
-            $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
+            $img = Image::make( public_path("storage/{$ruta_imagen}"));
             $img->save();
             $empresa->logo = $ruta_imagen;
         }
@@ -91,7 +91,7 @@ class EmpresaController extends Controller
             $img->save();
             $empresa->icono = $ruta_imagen;
         }
-        
+
         $empresa->nombreEmpresa = $data['nombreEmpresa'];
         $empresa->direccion = $data['direccion'];
         $empresa->telefono = $data['telefono'];
@@ -99,7 +99,7 @@ class EmpresaController extends Controller
         $empresa->instagram = $data['instagram'];
         $empresa->mapa = $data['mapa'];
         $empresa->save();
-        
+
 
         return redirect()->action([EmpresaController::class, 'index']);
     }
@@ -194,7 +194,7 @@ class EmpresaController extends Controller
             $img->save();
             $empresa->imgMenu = $ruta_imagen;
         }
-        
+
         $empresa->tituloMenu = $data['tituloMenu'];
         $empresa->save();
 
@@ -224,7 +224,7 @@ class EmpresaController extends Controller
             $img->save();
             $empresa->imgContacto = $ruta_imagen;
         }
-        
+
         $empresa->tituloContacto = $data['tituloContacto'];
         $empresa->save();
 
