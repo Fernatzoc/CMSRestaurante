@@ -36,9 +36,9 @@
 
                     <div class="name">
                         <input
-                            type="text" 
-                            name="nombre" 
-                            placeholder="Nombre" 
+                            type="text"
+                            name="nombre"
+                            placeholder="Nombre"
                             value="{{ old('nombre') }}">
 
                         @error('nombre')
@@ -51,9 +51,9 @@
 
                     <div class="lastname">
                         <input
-                            type="text" 
-                            name="apellido" 
-                            placeholder="Apellido" 
+                            type="text"
+                            name="apellido"
+                            placeholder="Apellido"
                             value="{{ old('apellido') }}">
 
                         @error('apellido')
@@ -62,14 +62,30 @@
                         </span>
                         @enderror
                     </div>
-                    
+
                 </div>
 
                 <div>
-                    <input 
-                        type="email" 
-                        name="correo" 
-                        placeholder="Correo Electronico" 
+                    <input
+                        type="number"
+                        name="telefono"
+                        placeholder="Telefono"
+                        value="{{ old('telefono') }}"
+                        maxlength="8"/>
+
+                    @error('telefono')
+                    <span class="invalid-feedback d-block" role="alert">
+                        <strong class="error-f">{{$message}}</strong>
+                    </span>
+                    @enderror
+
+                </div>
+
+                <div>
+                    <input
+                        type="email"
+                        name="correo"
+                        placeholder="Correo Electronico"
                         value="{{ old('correo') }}">
 
                     @error('correo')
@@ -81,25 +97,10 @@
                 </div>
 
                 <div>
-                    <input 
-                        type="number" 
-                        name="telefono" 
-                        placeholder="Telefono" 
-                        value="{{ old('telefono') }}">
-
-                    @error('telefono')
-                    <span class="invalid-feedback d-block" role="alert">
-                        <strong class="error-f">{{$message}}</strong>
-                    </span>
-                    @enderror
-
-                </div>
-
-                <div>
-                    <textarea 
-                        name="mensaje" 
-                        cols="30" 
-                        rows="10" 
+                    <textarea
+                        name="mensaje"
+                        cols="30"
+                        rows="10"
                         placeholder="Tu mensaje">{{ old('mensaje') }}</textarea>
 
                     @error('mensaje')
@@ -107,7 +108,7 @@
                         <strong class="error-f">{{$message}}</strong>
                     </span>
                     @enderror
-                    
+
                 </div>
 
 
