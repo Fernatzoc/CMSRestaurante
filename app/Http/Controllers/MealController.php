@@ -18,8 +18,7 @@ class MealController extends Controller
     {
 
         $meals = Meal::latest()
-        ->where('name', 'LIKE', "%$request->adminlteSearch%" )
-        ->paginate(15);
+        ->where('name', 'LIKE', "%$request->adminlteSearch%" )->get();
 
         return view('admin.meal.index', compact('meals'));
     }
@@ -92,7 +91,7 @@ class MealController extends Controller
         $img_actual = $meal->image;
 
         $meal->active = 'off'; //se setea off si el checkbox no existe ne el request
-        
+
         $meal->update( $request->all() );
 
         if($request->file('image')){

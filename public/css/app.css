@@ -10063,7 +10063,8 @@ a:hover {
   }
 }
 .historia-restaurante {
-  width: 100% x;
+  width: 100%;
+  text-align: justify;
 }
 
 .historia-restaurante h2 {
@@ -10079,6 +10080,7 @@ a:hover {
 
 .imagen-acercade {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .imagen-acercade img {
@@ -10703,7 +10705,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   }
 
   .titulo_baner {
-    font-size: 60px;
+    font-size: 45px;
   }
 }
 /*FIN  HEADER RESPONSIVE */
@@ -10874,6 +10876,11 @@ body.nav-active .nav__list-item:nth-child(10) {
     margin: 0 10px 0 auto;
   }
 }
+
+.nuestrahistoria p {
+    text-align: justify;
+}
+
 .titulohistoria h3 {
   color: #f89e4a;
   font-size: 28px;
@@ -10931,7 +10938,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   }
 
   .menu-platillo-content h3 {
-    line-height: 2;
+    line-height: 1;
     margin: 0;
     padding: 0;
     color: #f89e4a;
@@ -10952,8 +10959,10 @@ body.nav-active .nav__list-item:nth-child(10) {
     font-size: 39px;
   }
 }
+
 .menu-platillo {
   text-align: center;
+  line-height: 1.1;
 }
 
 .menu-platillo-content h3 {

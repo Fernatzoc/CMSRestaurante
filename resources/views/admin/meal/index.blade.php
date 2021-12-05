@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card mt-2">
-                            
+
                             <div class="card-header">
                                 Platillos del Menu
                                 <a href="{{ route('meal.create') }}" class="btn btn-sm btn-primary float-right">Crear</a>
@@ -23,11 +23,10 @@
                                         {{ session('status') }}
                                     </div>
                                 @endif
-                                <div class="table-responsive">  
-                                    <table class="table">
+                                <div class="table-responsive">
+                                    <table id="myTable" class="table">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
                                                 <th>IMAGEN</th>
                                                 <th>NOMBRE</th>
                                                 <th>DESCRIPCIÓN</th>
@@ -42,7 +41,6 @@
 
                                                 <tr>
 
-                                                    <td><strong>{{ $meal->id }}</strong></td>
                                                     <td>
                                                         @if($meal->image)
 
@@ -66,7 +64,7 @@
                                                     </td>
                                                     <td>
 
-                                                    @if( @$meal->active == 'on' ) 
+                                                    @if( @$meal->active == 'on' )
                                                     <i class="fas fa-check" style="color: rgb(117, 175, 0); font-size: 18px"></i>
                                                     @else
                                                     <i class="far fa-circle" style="color:#ffc107; font-size: 18px "></i>
@@ -90,7 +88,7 @@
                                     </table>
                                 </div>
                                 <div class="mt-3">
-                                        {{ $meals->links('pagination::bootstrap-4') }}
+                                        {{-- {{ $meals->links('pagination::bootstrap-4') }} --}}
                                 </div>
 
                             </div>
@@ -108,6 +106,56 @@
 
 
 @endsection
+
+
+@section('css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+@stop
+
+@section('js')
+
+ <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+ <script>
+
+$(document).ready( function () {
+
+    $('#myTable').DataTable( {
+        columnDefs: [
+            { orderable: false, targets: 0 },
+            { orderable: false, targets: 1 },
+            { orderable: false, targets: 2 },
+            { orderable: false, targets: 5 },
+            { orderable: false, targets: 6 }
+        ],
+        "language": {
+            "info": "Mostrando pagina _PAGE_ de _PAGES_",
+            "decimal":        "",
+            "emptyTable":     "No hay datos",
+            "infoEmpty":      "Showing 0 to 0 of 0 registros",
+            "infoFiltered":   "(filtrado de _MAX_ total registros)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Mostrando _MENU_  registros",
+            "loadingRecords": "Cargando...",
+            "processing":     "Procesando...",
+            "search":         "Buscar:",
+            "zeroRecords":    "No se encontro ningun dato",
+            "paginate": {
+                "first":      "Primero",
+                "last":       "Ultimo",
+                "next":       "Siguiente",
+                "previous":   "Anterior"
+            },
+        },
+    } );
+
+} );
+
+ </script>
+
+
+@stop
 
 
 

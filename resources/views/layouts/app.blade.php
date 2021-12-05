@@ -113,6 +113,49 @@
 
 
 
+
+
+
+    {{-- POPUP DESARROLLADORES --}}
+
+    <style>
+
+        .modal-body iframe{
+            height: auto;
+            width: 100%;
+        }
+
+    </style>
+
+
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+
+                <h4>Desarrolladores</h4>
+                <div class="github-card" data-user="Fernatzoc"></div>
+                <div class="github-card" data-user="RodrigoJuarezGT"></div>
+
+                <h4>Repositorio del Proyecto</h4>
+                <div class="text-center">
+                    <a href="https://github.com/Fernatzoc/CMSRestaurante" target="_blank">
+                        <i class="fab fa-github" style="font-size: 60px"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    {{--FIN POPUP DESARROLLADORES --}}
+
+
+
 <footer class="footer contenedor">
 
 
@@ -182,7 +225,10 @@
     </div>
 
     <div class="credits">
-        <p>&copy; Copyright {{now()->year}} | Chatos</p>
+        <p>
+            &copy; andreascafeyrestaurante.com Todos los derechos reservados {{now()->year}} |
+            <a class="login-trigger" href="#" data-target="#login" data-toggle="modal"><strong>DESARROLLADORES</strong></a>
+        </p>
     </div>
 
     <a class="ir-arriba"  javascript:void(0) title="Volver arriba">
@@ -196,6 +242,7 @@
 
 
 <script src="{{ asset('js/header_movil.js') }}"></script>
+<script src="https://lab.lepture.com/github-cards/widget.js"></script>
 @livewireScripts
 
 </body>
