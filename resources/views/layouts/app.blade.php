@@ -111,6 +111,8 @@
     </main>
 
 
+
+
 <footer class="footer contenedor">
 
 
@@ -191,6 +193,7 @@
     </a>
 
 </footer>
+
 
 <script src="{{ asset('js/header_movil.js') }}"></script>
 @livewireScripts
