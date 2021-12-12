@@ -29,10 +29,15 @@ class EmpresaSeeder extends Seeder
             'sobreNosotros' => 'Sobre Nosotros',
             'tituloHome' => 'Titulo Home',
             'tituloConocenos' => 'Titulo Conocenos',
+            'parrafoConocenos' => 'Somos chefs experimentados y apasionados que desean servirle los mejores manjares que satisfagan su paladar.',
             'tituloMenu' => 'Titulo Menu',
             'tituloContacto' => 'Titulo Contacto',
             'imagenHome' => 'img',
+            'imagenHome2' => 'img',
+            'imagenFija' => 'img',
             'imgConocenos' => 'img',
+            'imgConocenos2' => 'img',
+            'imagenFija2' => 'img',
             'imgMenu' => 'img',
             'imgContacto' => 'img',
             'created_at' => date('Y-m-d H:i:s'),
@@ -94,6 +99,6 @@ class EmpresaSeeder extends Seeder
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
-    
+
     }
 }

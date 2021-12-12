@@ -38,8 +38,6 @@
 </head>
 
 <body>
-
-
 <div class="cd-header">
     <div class="icono_menu_movil">
         <div class="">
@@ -227,7 +225,7 @@
     <div class="credits">
         <p>
             &copy; andreascafeyrestaurante.com Todos los derechos reservados {{now()->year}} |
-            <a class="login-trigger" href="#" data-target="#login" data-toggle="modal"><strong>DESARROLLADORES</strong></a>
+            <a class="login-trigger" href="#" data-target="#login" data-toggle="modal"><strong style="color: #f89e4a">DESARROLLADORES</strong></a>
         </p>
     </div>
 

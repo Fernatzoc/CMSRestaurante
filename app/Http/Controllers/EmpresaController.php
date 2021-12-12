@@ -118,6 +118,8 @@ class EmpresaController extends Controller
             'tituloHome'       => 'required',
             'sobreNosotros'    => 'required',
             'imagenHome'       => 'image',
+            'imagenHome2'       => 'image',
+            'imagenFija'       => 'image',
 
         ]);
 
@@ -128,6 +130,20 @@ class EmpresaController extends Controller
             $img = Image::make( public_path("storage/{$ruta_imagen}"))->fit(1200,550);
             $img->save();
             $empresa->imagenHome = $ruta_imagen;
+        }
+
+        if( request('imagenHome2')) {
+            $ruta_imagen = $request['imagenHome2']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"));
+            $img->save();
+            $empresa->imagenHome2 = $ruta_imagen;
+        }
+
+        if( request('imagenFija')) {
+            $ruta_imagen = $request['imagenFija']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"));
+            $img->save();
+            $empresa->imagenFija = $ruta_imagen;
         }
 
         $empresa->tituloHome = $data['tituloHome'];
@@ -150,7 +166,10 @@ class EmpresaController extends Controller
         $data = $request->validate([
             'tituloConocenos'  => 'required',
             'conocenos'        => 'required',
+            'parrafoConocenos'        => 'required',
             'imgConocenos'     => 'image',
+            'imgConocenos2'     => 'image',
+            'imagenFija2'     => 'image',
         ]);
 
         $empresa = Empresa::find(1);
@@ -162,7 +181,22 @@ class EmpresaController extends Controller
             $empresa->imgConocenos = $ruta_imagen;
         }
 
+        if( request('imgConocenos2')) {
+            $ruta_imagen = $request['imgConocenos2']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"));
+            $img->save();
+            $empresa->imgConocenos2 = $ruta_imagen;
+        }
+
+        if( request('imagenFija2')) {
+            $ruta_imagen = $request['imagenFija2']->store('upload-images', 'public');
+            $img = Image::make( public_path("storage/{$ruta_imagen}"));
+            $img->save();
+            $empresa->imagenFija2 = $ruta_imagen;
+        }
+
         $empresa->tituloConocenos = $data['tituloConocenos'];
+        $empresa->parrafoConocenos = $data['parrafoConocenos'];
         $empresa->conocenos = $data['conocenos'];
         $empresa->save();
 

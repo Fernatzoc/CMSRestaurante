@@ -28,10 +28,15 @@ class CreateEmpresasTable extends Migration
             $table->text('sobreNosotros');
             $table->string('tituloHome');
             $table->string('tituloConocenos');
+            $table->string('parrafoConocenos');
             $table->string('tituloMenu');
             $table->string('tituloContacto');
             $table->string('imagenHome');
+            $table->string('imagenHome2');
+            $table->string('imagenFija');
             $table->string('imgConocenos');
+            $table->string('imgConocenos2');
+            $table->string('imagenFija2');
             $table->string('imgMenu');
             $table->string('imgContacto');
             $table->timestamps();

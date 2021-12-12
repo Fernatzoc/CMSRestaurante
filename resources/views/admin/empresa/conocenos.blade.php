@@ -17,6 +17,16 @@
       });
     </script>
 
+    <script>
+        tinymce.init({
+            selector: '#parrafoConocenos'
+        });
+
+        tinymce.init({
+            selector: '#parrafoConocenos'
+        });
+    </script>
+
 @stop
 
 @section('content')
@@ -27,12 +37,12 @@
         <div class="col-md-8">
             <form method="POST" action="{{ route('empresa.conocenos_update') }}" enctype="multipart/form-data" >
                 @csrf
-        
+
                 @method('PUT')
-        
+
                     <div class="form-group">
                         <label for="tituloConocenos" >Titulo Pagina:</label>
-                        <input 
+                        <input
                             class="form-control @error('tituloConocenos') is-invalid @enderror"
                             type="text"
                             name="tituloConocenos"
@@ -46,12 +56,26 @@
                         </span>
                         @enderror
                     </div>
-        
+
+                    <div class="form-group">
+                        <label for="parrafoConocenos" >Titulo Pagina:</label>
+                        <textarea
+                            class="form-control @error('parrafoConocenos') is-invalid @enderror"
+                            id="parrafoConocenos"
+                            name="parrafoConocenos">{{ $empresa->parrafoConocenos }}</textarea>
+
+                        @error('parrafoConocenos')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
                     <div class="form-group">
                         <label for="conocenos">Conocenos</label>
                         <textarea
                         class="form-control @error('conocenos') is-invalid @enderror"
-                        id="conocenos" 
+                        id="conocenos"
                         name="conocenos">{{ $empresa->conocenos }}</textarea>
 
                         @error('conocenos')
@@ -61,7 +85,7 @@
                         @enderror
 
                     </div>
-        
+
                     <div class="form-group">
                         <label for="imgConocenos">Imagen Fondo</label>
                         <input
@@ -83,11 +107,53 @@
                         </div>
                     </div>
 
+                <div class="form-group">
+                    <label for="imgConocenos2">Imagen Nosotros</label>
+                    <input
+                        class="form-control @error('conocenos') is-invalid @enderror"
+                        type="file"
+                        id="imgConocenos2"
+                        name="imgConocenos2"
+                    >
+
+                    @error('imgConocenos2')
+                    <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+
+                    <div>
+                        <p>Imagen Actual</p>
+                        <img src="/storage/{{$empresa->imgConocenos2}}" style="width: 300px">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagenFija2">Imagen Fondo</label>
+                    <input
+                        class="form-control @error('conocenos') is-invalid @enderror"
+                        type="file"
+                        id="imagenFija2"
+                        name="imagenFija2"
+                    >
+
+                    @error('imagenFija2')
+                    <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+
+                    <div>
+                        <p>Imagen Actual</p>
+                        <img src="/storage/{{$empresa->imagenFija2}}" style="width: 300px">
+                    </div>
+                </div>
+
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Guardar</button>
                     </div>
-                
+
             </form>
         </div>
     </div>

@@ -1,4 +1,6 @@
-.parrafouno h4{
+.parrafouno h4,
+.parrafouno p {
+    font-family: $fontTitle;
     margin-bottom: 75px;
     color: $primary;
     font-size: 28px;
@@ -6,40 +8,39 @@
     font-weight: normal;
     width: 85%;
     margin: 0 auto 100px auto;
-  
+
     }
-    
+
     .parrafouno img{
-        width: 100%; 
+        width: 100%;
     }
-    
+
     .titulohistoria h2{
     color:$primary;
     text-align:left;
     font-size: 48px;
     font-weight: normal;
     }
-  
+
   @media (min-width: 768px) {
     .nuestrahistoria{
       width: 65%;
       margin: 0 10px 0 auto ;
     }
     }
-  
-    
+
+
     .titulohistoria h3{
    color:$primary;
    font-size: 28px;
     text-align:left;
     font-weight: normal;
     }
-    
-        
+
+
     .titulohistoria p{
     color:$colorText;
     text-align:center;
     font-size: 16px;
     text-align: left;
     }
-            

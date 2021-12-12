@@ -16,7 +16,7 @@
 
     <h1>Bienvenidos A Andrea's Cafe y Restaurante</h1>
     <div class="texto-historia">
-        <div class="imagen-acercade"> <img src="https://websitedemos.net/steak-house-02/wp-content/uploads/sites/841/2021/05/about.jpg " alt=""></div>
+        <div class="imagen-acercade"> <img src="/storage/{{$empresa->imagenHome2}}"></div>
         <div class="historia-restaurante">
             {!! $empresa->sobreNosotros !!}
             <a class="btn-reservation btn-size-r" href="/contacto">Reservar Una Mesa</a>
@@ -26,14 +26,14 @@
     {{-- <livewire:events-section> --}}
     @livewire('events-section')
 
-    
+
 </section>
 
     {{-- <livewire:random-meals> --}}
     @livewire('random-meals')
 
-<div class="fondo-fijo inicio"> </div>
-{{-- 
+<div style="background-image: url('/storage/{{$empresa->imagenFija}}');" class="fondo-fijo"> </div>
+{{--
 <section class="comentarios contenedor">
     <h1>Amado por muchos</h1>
     <div class="lista-comentarios">
@@ -45,7 +45,7 @@
             <h3>MArk Tomphson</h3>
         </div>
     </div>
-    
+
     <div class="lista-comentarios">
         <p>Nada mejor que una tarde entre amigos, en un lugar tan agradable como este, puedo decir que disfrute cada instante y cada platillo.</p>
         <div class="fotnom">
@@ -55,7 +55,7 @@
             <h3>Lisa Ruiz</h3>
         </div>
     </div>
-    
+
     <div class="lista-comentarios">
         <p>La delicadeza y la calidad en cada uno de sus platillos, de los mejores el occidente del pais, definitivamente un destino gastronomico que no puede faltar de visitar.</p>
         <div class="fotnom">
@@ -66,5 +66,5 @@
         </div>
     </div>
 --}}
-</section> 
+</section>
 @endsection
