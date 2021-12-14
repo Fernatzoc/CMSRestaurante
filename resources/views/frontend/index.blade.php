@@ -19,7 +19,7 @@
         <div class="imagen-acercade"> <img src="/storage/{{$empresa->imagenHome2}}"></div>
         <div class="historia-restaurante">
             {!! $empresa->sobreNosotros !!}
-            <a class="btn-reservation btn-size-r" href="/contacto">Reservar Una Mesa</a>
+            <a class="btn-reservation btn-size-r" href="/menu">Ver Menú </a>
         </div>
     </div>
 

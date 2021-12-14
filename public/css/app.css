@@ -10144,6 +10144,10 @@ a:hover {
   font-weight: normal;
 }
 
+.platillo{
+    text-align: center;
+}
+
 /* FIN PLATILLOS */
 /* CAJA FONDO FIJO */
 .fondo-fijo {
