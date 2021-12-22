@@ -153,6 +153,9 @@
     {{--FIN POPUP DESARROLLADORES --}}
 
 
+    <a href="https://api.whatsapp.com/send?phone=502{{ $empresa->telefono }} " target="_blank" class="make_an_order_button">
+        Ordenar <i class="fab fa-whatsapp"></i>
+    </a>
 
 <footer class="footer contenedor">
 
@@ -162,9 +165,11 @@
         <div class="reservation">
             <h2>¡Estamos esperando para servirle!!</h2>
             <a class="btn-reservation btn-size-r" href="/contacto">Reservar una mesa</a>
-            <h2 class="mb-5">O Llamanos {{ $empresa->telefono }}</h2>
+            <a href="https://api.whatsapp.com/send?phone=502{{ $empresa->telefono }} " target="_blank" class="btn-reservation btn-size-r whatsappbutton">
+                Contactanos <i class="fab fa-whatsapp" style="margin-left: 5px; font-size:20px;"></i>
+            </a>
             <div class="menu-footer">
-                <ul class="list-menu-footer" >
+                <ul class="list-menu-footer">
                     <li><a href="/">Inicio</a></li>
                     <li><a href="/conocenos">Conocenos</a></li>
                     <li><a href="/menu">Menu</a></li>

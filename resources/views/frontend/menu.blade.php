@@ -26,6 +26,7 @@
 </div>
 
 
+
 <script>
 
 var menu_categories = document.getElementById('menu_categories'),

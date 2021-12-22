@@ -14,7 +14,9 @@
 @section('content')
 <section class="contenedor">
     <div class="info">
-        <h2>Teléfono: {{$empresa->telefono}}</h2>
+        <a href="https://api.whatsapp.com/send?phone=502{{ $empresa->telefono }} " target="_blank" class="btn-reservation btn-size-r whatsappbutton">
+            Contactanos <i class="fab fa-whatsapp" style="margin-left: 5px; font-size:20px;"></i>
+        </a>
         <h3>Dirección</h3>
         <p>{{$empresa->direccion}}</p>
     </div>

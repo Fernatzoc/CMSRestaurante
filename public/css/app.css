@@ -10092,8 +10092,11 @@ a:hover {
     gap: 100px;
   }
 }
+
 .historia-restaurante {
-  width: 100% x;
+  width: 100%;
+  text-align: justify;
+  padding-top: 20px;
 }
 
 .historia-restaurante h2 {
@@ -10313,6 +10316,8 @@ header > div {
   font-weight: normal;
   font-family: "Yeseva One", cursive;
 }
+
+
 
 .titulo_baner div {
   width: 50%;
@@ -10736,9 +10741,6 @@ body.nav-active .nav__list-item:nth-child(10) {
     background-size: 180%;
   }
 
-  .titulo_baner {
-    font-size: 60px;
-  }
 }
 /*FIN  HEADER RESPONSIVE */
 /* FIN HEADER */
@@ -11125,3 +11127,153 @@ body.nav-active .nav__list-item:nth-child(10) {
   background-color: #f89e4a;
   color: #fff;
 }
+
+
+/* DROP UP MENU FOR CATEGORIES */
+
+
+.menu_categories{
+    position: fixed;
+    bottom: 0px;
+    right: -764px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 109;
+    font-size: 18px;
+    padding: 5px;
+    color: #f89e4a;
+    font-weight: 800;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
+.anim_menu_categories{
+    animation: anim_menu_categories 0.5s forwards ease-out;
+}
+
+.anim_menu_categories_close{
+    animation: anim_menu_categories_close 0.5s forwards ease-out;
+}
+
+
+.menu_categories a{
+    color: #f89e4a !important;
+    font-weight: 800 !important;
+}
+
+.item_menu_categories{
+    margin-left: 10px;
+}
+
+
+.dropup-menu{
+    position: fixed;
+    bottom: 65px;
+    right: 20px;
+    background-color: #f89e4a;
+    padding: 12px;
+    border-radius: 50px;
+    z-index: 110;
+    box-shadow: 0px 0px 0px 0px #f89e4a;
+    animation: dropup-menu-box-shadow-anim 1s 5 ease-in-out;
+    animation-delay: 1s;
+}
+
+.dropup-menu-animation-forwards{
+    animation: anim_button_menu_categories_backwards 0.5s ease;
+}
+
+.dropup-menu-animation-backwards{
+    animation: anim_button_menu_categories_forwards 0.5s ease;
+}
+
+
+.dropup-menu i{
+    color: white;
+    font-size: 33px;
+}
+
+@media only screen and (min-width: 765px) {
+    .dropup-menu, .menu_categories{
+        display: none;
+    }
+}
+
+
+/* animations */
+
+@keyframes dropup-menu-box-shadow-anim {
+    0%{
+        box-shadow: 0px 0px 0px 0px #f89e4a;
+    }
+    100%{
+        box-shadow: 0px 0px 0px 15px #f89e4a00;
+    }
+}
+
+@keyframes anim_menu_categories {
+    0%{
+        right: -764px;
+    }
+    100%{
+        right: -50px;
+    }
+}
+
+@keyframes anim_menu_categories_close {
+    0%{
+        right: -50px;
+    }
+    100%{
+        right: -764px;
+    }
+}
+
+@keyframes anim_button_menu_categories_forwards {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes anim_button_menu_categories_backwards {
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* END DROP UP MENU FOR CATEGORIES */
+
+
+/* BOTON WHATSAPP */
+
+.whatsappbutton{
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.make_an_order_button{
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    background-color: #f89e4a;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+/* END BOTON WHATSAPP */
